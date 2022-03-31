@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using lazy_manager.hook;
 
 namespace lazy_manager
 {
@@ -19,13 +20,14 @@ namespace lazy_manager
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         // hook button
         private void HookButtonClick(object sender, EventArgs e)
         {
             MessageBox.Show("Hook Button Clicked");
+            new GlobalKeyBoardHook();
         }
 
         private void UnHookButtonClick(object sender, EventArgs e)
