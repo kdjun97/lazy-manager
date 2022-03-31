@@ -56,8 +56,10 @@ namespace lazy_manager.hook
         }
         
         // constructor
-        GlobalKeyBoardHook()
+        public GlobalKeyBoardHook()
         {
+            HookedKeys.Add(Keys.F1);
+            KeyDown += new KeyEventHandler();
             hook();
         }
 
@@ -97,6 +99,7 @@ namespace lazy_manager.hook
                     {
                         if (key == Keys.F1 || key == Keys.F2 || key == Keys.F3 || key == Keys.F4)
                         {
+                            MessageBox.Show("Key Pressed :" + key.ToString());
                             KeyDown(this, eventKey);
                         }
                     }
