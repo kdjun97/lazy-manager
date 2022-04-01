@@ -45,6 +45,8 @@
             this.unhookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editBox = new System.Windows.Forms.TextBox();
             this.virtualKeyCodeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -106,7 +108,7 @@
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.saveToolStripMenuItem.Text = "Save";
+            this.saveToolStripMenuItem.Text = "Save As";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
@@ -182,6 +184,11 @@
             this.virtualKeyCodeToolStripMenuItem.Name = "virtualKeyCodeToolStripMenuItem";
             this.virtualKeyCodeToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.virtualKeyCodeToolStripMenuItem.Text = "Virtual KeyCode";
+            this.virtualKeyCodeToolStripMenuItem.Click += new System.EventHandler(this.virtualKeyCodeToolStripMenuItem_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Form1
             // 
@@ -221,6 +228,8 @@
         private System.Windows.Forms.ToolStripMenuItem virtualKeyCodeToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.TextBox editBox;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
 

@@ -6,8 +6,11 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 using System.Windows.Forms;
 using lazy_manager.hook;
+using System.IO;
+
 
 namespace lazy_manager
 {
@@ -23,56 +26,84 @@ namespace lazy_manager
             
         }
 
-        // hook button
-        private void HookButtonClick(object sender, EventArgs e)
-        {
-            MessageBox.Show("Hook Button Clicked");
-            new GlobalKeyBoardHook();
-        }
-
-        private void UnHookButtonClick(object sender, EventArgs e)
-        {
-            MessageBox.Show("UnHook Button Clicked");
-        }
-
         // New File
         private void newFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // TODO 
-            // 1. editBox의 길이가 0이 아니라면
-            // 2. 경고 문구
-            // 3. 그 후 (혹은 길이가 0이면)
-            // 4. editBox.Text 초기화
             if (editBox.Text.Length != 0)
-            {
-
-            }
+                SaveFile(true);
             editBox.Text = "";
         }
 
         // Load File
         private void loadFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // TODO
-            // 1. 유저가 경로 설정
-            // 2. 경로의 파일을 읽음
-            // 3. editBox에 적용
+            LoadFile();
+        }
+
+        private void LoadFile()
+        {
+            try
+            {
+                openFileDialog1.FileName = "";
+                openFileDialog1.Filter = ".txt|*.txt|.ini|*.ini|All|*.*";
+                openFileDialog1.ShowDialog();
+                string fileData = File.ReadAllText(openFileDialog1.FileName);
+                editBox.Text = fileData;
+            } catch (FileNotFoundException eMsg) // 파일 선택 없이 나갈때
+            {
+                Debug.Print(eMsg.ToString());
+            } catch (ArgumentException eMsg) // 빈 경로일 때,
+            {
+                Debug.Print(eMsg.ToString());
+            }
         }
 
         // Save File
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // TODO
-            // 1. 유저가 경로 지정
-            // 2. file name 입력받음
-            // 3. 저장
+            SaveFile(true);
+            /* 무조건 save as 기능만 넣음
+            else
+                SaveFile(false);
+            */
+        }
+
+        private void SaveFile(bool isSavingAs)
+        {
+            if (isSavingAs == true) // Save As
+            {
+                try
+                {
+                    saveFileDialog1.Filter = ".txt|*.txt|.ini|*.ini|All|*.*";
+                    saveFileDialog1.ShowDialog();
+                    File.WriteAllText(saveFileDialog1.FileName, editBox.Text);
+                } catch (FileNotFoundException eMsg) // 파일 선택 없이 나갈때
+                {
+                    Debug.Print(eMsg.ToString());
+                } catch (ArgumentException eMsg) // 빈 경로일 때,
+                {
+                    Debug.Print(eMsg.ToString());
+                }
+                
+            }
+            else // Save (현재 파일명 동일)
+            {
+                File.WriteAllText(saveFileDialog1.FileName, editBox.Text);
+            }
         }
 
         // Exit
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // TODO
-            // 1. 프로그램 종료
+            this.Close();
+        }
+
+        // Virtual Key Code
+        private void virtualKeyCodeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VirtualKeyCodeForm virtualKeyCodeForm = new VirtualKeyCodeForm();
+            virtualKeyCodeForm.ShowDialog();
+            // 창 고정 필요함.
         }
     }
 }
