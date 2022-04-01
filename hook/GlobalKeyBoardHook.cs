@@ -5,6 +5,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace lazy_manager.hook
 {
@@ -59,8 +60,13 @@ namespace lazy_manager.hook
         public GlobalKeyBoardHook()
         {
             HookedKeys.Add(Keys.F1);
-            KeyDown += new KeyEventHandler();
+            KeyDown += new KeyEventHandler(KeyDownEvent);
             hook();
+        }
+
+        public void KeyDownEvent(object sender, KeyEventArgs e)
+        {
+            e.Handled = false;
         }
 
         // destructor
@@ -92,6 +98,7 @@ namespace lazy_manager.hook
             if (code >= 0)
             {
                 Keys key = (Keys)lParam.vkCode;
+                Debug.Print(key.ToString());
                 if (HookedKeys.Contains(key))
                 {
                     KeyEventArgs eventKey = new KeyEventArgs(key);
