@@ -29,3 +29,7 @@
 **History**  
   - [Lazy Manager](https://kdjun97.github.io/blog/Lazy_Manager/)
   - [Lazy Manager2](https://kdjun97.github.io/blog/Lazy_Manager2/)
+
+# TODO
+  * save, save as 기능
+  * exception들
