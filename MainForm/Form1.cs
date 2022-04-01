@@ -34,12 +34,13 @@ namespace lazy_manager
             editBox.Text = "";
         }
 
-        // Load File
+        // Load Event
         private void loadFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LoadFile();
         }
 
+        // Load File
         private void LoadFile()
         {
             try
@@ -58,7 +59,7 @@ namespace lazy_manager
             }
         }
 
-        // Save File
+        // Save Event
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveFile(true);
@@ -68,6 +69,7 @@ namespace lazy_manager
             */
         }
 
+        // Save As File
         private void SaveFile(bool isSavingAs)
         {
             if (isSavingAs == true) // Save As
