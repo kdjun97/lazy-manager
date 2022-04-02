@@ -44,10 +44,13 @@
             this.programInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.virtualKeyCodeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.editBox = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.readScriptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -113,6 +116,7 @@
             // funcToolStripMenuItem
             // 
             this.funcToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.readScriptToolStripMenuItem,
             this.hookToolStripMenuItem,
             this.unhookToolStripMenuItem});
             this.funcToolStripMenuItem.Name = "funcToolStripMenuItem";
@@ -122,13 +126,13 @@
             // hookToolStripMenuItem
             // 
             this.hookToolStripMenuItem.Name = "hookToolStripMenuItem";
-            this.hookToolStripMenuItem.Size = new System.Drawing.Size(137, 26);
+            this.hookToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.hookToolStripMenuItem.Text = "hook";
             // 
             // unhookToolStripMenuItem
             // 
             this.unhookToolStripMenuItem.Name = "unhookToolStripMenuItem";
-            this.unhookToolStripMenuItem.Size = new System.Drawing.Size(137, 26);
+            this.unhookToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.unhookToolStripMenuItem.Text = "unhook";
             // 
             // settingToolStripMenuItem
@@ -142,7 +146,7 @@
             // ingToolStripMenuItem
             // 
             this.ingToolStripMenuItem.Name = "ingToolStripMenuItem";
-            this.ingToolStripMenuItem.Size = new System.Drawing.Size(117, 26);
+            this.ingToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.ingToolStripMenuItem.Text = "~ing";
             // 
             // infoToolStripMenuItem
@@ -170,11 +174,19 @@
             // statusStrip1
             // 
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip1.Location = new System.Drawing.Point(0, 352);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 351);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(413, 24);
+            this.statusStrip1.Size = new System.Drawing.Size(413, 25);
             this.statusStrip1.TabIndex = 6;
             this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(58, 20);
+            this.toolStripStatusLabel1.Text = "Status :";
             // 
             // editBox
             // 
@@ -183,13 +195,20 @@
             this.editBox.Multiline = true;
             this.editBox.Name = "editBox";
             this.editBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.editBox.Size = new System.Drawing.Size(413, 324);
+            this.editBox.Size = new System.Drawing.Size(413, 323);
             this.editBox.TabIndex = 7;
             this.editBox.WordWrap = false;
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // readScriptToolStripMenuItem
+            // 
+            this.readScriptToolStripMenuItem.Name = "readScriptToolStripMenuItem";
+            this.readScriptToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.readScriptToolStripMenuItem.Text = "Read Script";
+            this.readScriptToolStripMenuItem.Click += new System.EventHandler(this.readScriptToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -205,6 +224,8 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,6 +252,8 @@
         private System.Windows.Forms.TextBox editBox;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripMenuItem readScriptToolStripMenuItem;
     }
 }
 

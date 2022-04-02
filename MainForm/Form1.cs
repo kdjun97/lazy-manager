@@ -46,7 +46,7 @@ namespace lazy_manager
             try
             {
                 openFileDialog1.FileName = "";
-                openFileDialog1.Filter = ".txt|*.txt|.ini|*.ini|All|*.*";
+                openFileDialog1.Filter = ".ini|*.ini|.txt|*.txt|All|*.*";
                 openFileDialog1.ShowDialog();
                 string fileData = File.ReadAllText(openFileDialog1.FileName);
                 editBox.Text = fileData;
@@ -76,7 +76,7 @@ namespace lazy_manager
             {
                 try
                 {
-                    saveFileDialog1.Filter = ".txt|*.txt|.ini|*.ini|All|*.*";
+                    saveFileDialog1.Filter = ".ini|*.ini|.txt|*.txt|All|*.*";
                     saveFileDialog1.ShowDialog();
                     File.WriteAllText(saveFileDialog1.FileName, editBox.Text);
                 } catch (FileNotFoundException eMsg) // 파일 선택 없이 나갈때
@@ -106,6 +106,16 @@ namespace lazy_manager
             VirtualKeyCodeForm virtualKeyCodeForm = new VirtualKeyCodeForm();
             virtualKeyCodeForm.ShowDialog();
             // 창 고정 필요함.
+        }
+
+        // Read Script
+        private void readScriptToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Script.ReadScript readScript = new Script.ReadScript();
+            List<Tuple<char, string>> list = readScript.ReadScriptLine(editBox.Text);
+            Debug.Print(list.Count.ToString());
+            for (int index = 0; index < list.Count(); index++)
+                Debug.Print(list[index].Item1 + " " + list[index].Item2);
         }
     }
 }
