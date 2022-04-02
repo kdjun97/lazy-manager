@@ -31,5 +31,6 @@
   - [Lazy Manager2](https://kdjun97.github.io/blog/Lazy_Manager2/)
 
 # TODO
-  * save, save as 기능
+  * HotkeySetting 함수 구현
+  * Hotkey Model 구현
   * exception들
