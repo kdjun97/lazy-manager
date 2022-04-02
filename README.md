@@ -31,6 +31,6 @@
   - [Lazy Manager2](https://kdjun97.github.io/blog/Lazy_Manager2/)
 
 # TODO
-  * HotkeySetting 함수 구현
+  * HotkeySetting 함수 구현(constructor exception 해결)
   * Hotkey Model 구현
   * exception들
