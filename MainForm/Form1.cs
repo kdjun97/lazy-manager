@@ -10,7 +10,7 @@ using System.Diagnostics;
 using System.Windows.Forms;
 using lazy_manager.hook;
 using System.IO;
-
+using lazy_manager.Model;
 
 namespace lazy_manager
 {
@@ -113,9 +113,13 @@ namespace lazy_manager
         {
             Script.ReadScript readScript = new Script.ReadScript();
             List<Tuple<char, string>> list = readScript.ReadScriptLine(editBox.Text);
-            Debug.Print(list.Count.ToString());
-            for (int index = 0; index < list.Count(); index++)
-                Debug.Print(list[index].Item1 + " " + list[index].Item2);
+            Debug.Print("----------readScript 끝-----------");
+            List<HotkeyModel> hotkeyModel = readScript.HotkeySetting(list);
+            for (int i=0; i<hotkeyModel.Count(); i++)
+            {
+                for (int j=0; j<hotkeyModel[i].GetCommand().Count(); j++)
+                    Debug.Print(hotkeyModel[i].GetCommand()[j].Item1.ToString() + "/" + hotkeyModel[i].GetCommand()[j].Item2.ToString());
+            }
         }
     }
 }

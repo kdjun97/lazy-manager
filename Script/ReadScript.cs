@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
 using System.IO;
+using lazy_manager.Model;
 
 namespace lazy_manager.Script
 {
@@ -52,6 +53,56 @@ namespace lazy_manager.Script
                 Debug.Print(eMsg.ToString());
             }
             return list;
+        }
+
+        // 핫키를 셋팅해주는 함수
+        public List<HotkeyModel> HotkeySetting(List<Tuple<char, string>> parsedData)
+        {
+            // 초기 버전은 loop 없이 q만 허용
+            List<HotkeyModel> hotkeyList = new List<HotkeyModel>(); // return해줄 hotkeyList
+            
+            try
+            {
+                for (int index = 0; index < parsedData.Count(); index++)
+                {
+                    if (parsedData[index].Item1 == 'h')
+                    {
+                        Debug.Print(index+"번에 h찾음");
+                        HotkeyModel hotkeyModel = new HotkeyModel(); // 하나의 핫키 모델
+                        Debug.Print("타겟:"+parsedData[index].Item2);
+                        hotkeyModel.SetHotkey(parsedData[index].Item2); // 핫키 설정
+                        Debug.Print("끝");
+
+                        int j = index + 1;
+                        while (true)
+                        {
+                            if (j > parsedData.Count()) // exception, q가 없을경우 무한루프
+                                throw new Exception("Loop Exception");
+                            if (parsedData[j].Item1 == 'q')
+                            {
+                                hotkeyModel.SetIsExit(true);
+                                index = j;
+                                break;
+                            }
+                            else
+                            {
+                                Debug.Print("하나 넣기전");
+                                Tuple<char, string> data = new Tuple<char, string>(parsedData[j].Item1, parsedData[j].Item2);
+                                hotkeyModel.SetCommand(data);
+                                Debug.Print("하나 넣음");
+                                j++;
+                            }
+                        }
+                    }
+                    
+                    // Debug.Print(parsedData[index].Item1 + " " + parsedData[index].Item2);
+                }
+            } catch (Exception eMsg)
+            {
+                Debug.Print(eMsg.Message);
+            }
+
+            return hotkeyList;
         }
     }
 }
