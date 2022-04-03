@@ -69,9 +69,7 @@ namespace lazy_manager.Script
                     {
                         Debug.Print(index+"번에 h찾음");
                         HotkeyModel hotkeyModel = new HotkeyModel(); // 하나의 핫키 모델
-                        Debug.Print("타겟:"+parsedData[index].Item2);
                         hotkeyModel.SetHotkey(parsedData[index].Item2); // 핫키 설정
-                        Debug.Print("끝");
 
                         int j = index + 1;
                         while (true)
@@ -81,21 +79,19 @@ namespace lazy_manager.Script
                             if (parsedData[j].Item1 == 'q')
                             {
                                 hotkeyModel.SetIsExit(true);
+                                hotkeyList.Add(hotkeyModel); // 완성된 모델 추가
+
                                 index = j;
                                 break;
                             }
                             else
                             {
-                                Debug.Print("하나 넣기전");
-                                Tuple<char, string> data = new Tuple<char, string>(parsedData[j].Item1, parsedData[j].Item2);
-                                hotkeyModel.SetCommand(data);
-                                Debug.Print("하나 넣음");
+                                hotkeyModel.SetCommand(new Tuple<char, string>(parsedData[j].Item1, parsedData[j].Item2));
                                 j++;
                             }
                         }
                     }
                     
-                    // Debug.Print(parsedData[index].Item1 + " " + parsedData[index].Item2);
                 }
             } catch (Exception eMsg)
             {

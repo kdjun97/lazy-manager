@@ -52,10 +52,10 @@ namespace lazy_manager
                 editBox.Text = fileData;
             } catch (FileNotFoundException eMsg) // 파일 선택 없이 나갈때
             {
-                Debug.Print(eMsg.ToString());
+                Debug.Print(eMsg.Message);
             } catch (ArgumentException eMsg) // 빈 경로일 때,
             {
-                Debug.Print(eMsg.ToString());
+                Debug.Print(eMsg.Message);
             }
         }
 
@@ -81,10 +81,10 @@ namespace lazy_manager
                     File.WriteAllText(saveFileDialog1.FileName, editBox.Text);
                 } catch (FileNotFoundException eMsg) // 파일 선택 없이 나갈때
                 {
-                    Debug.Print(eMsg.ToString());
+                    Debug.Print(eMsg.Message);
                 } catch (ArgumentException eMsg) // 빈 경로일 때,
                 {
-                    Debug.Print(eMsg.ToString());
+                    Debug.Print(eMsg.Message);
                 }
                 
             }
@@ -114,11 +114,17 @@ namespace lazy_manager
             Script.ReadScript readScript = new Script.ReadScript();
             List<Tuple<char, string>> list = readScript.ReadScriptLine(editBox.Text);
             Debug.Print("----------readScript 끝-----------");
+
             List<HotkeyModel> hotkeyModel = readScript.HotkeySetting(list);
+            Debug.Print("Hotkey Model Length = " + hotkeyModel.Count());
             for (int i=0; i<hotkeyModel.Count(); i++)
             {
+                Debug.Print("****" + (i + 1) + "번째 모델****");
+
+                Debug.Print("핫키:"+hotkeyModel[i].GetHotkey() + ", 명령어 갯수:"+ hotkeyModel[i].GetCommand().Count());
                 for (int j=0; j<hotkeyModel[i].GetCommand().Count(); j++)
-                    Debug.Print(hotkeyModel[i].GetCommand()[j].Item1.ToString() + "/" + hotkeyModel[i].GetCommand()[j].Item2.ToString());
+                    Debug.Write("["+ hotkeyModel[i].GetCommand()[j].Item1.ToString() + "]" + hotkeyModel[i].GetCommand()[j].Item2.ToString() + " ");
+                Debug.Print("");
             }
         }
     }
