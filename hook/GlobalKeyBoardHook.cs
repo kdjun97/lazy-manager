@@ -66,7 +66,7 @@ namespace lazy_manager.hook
 
         public void KeyDownEvent(object sender, KeyEventArgs e)
         {
-            e.Handled = false;
+            e.Handled = true;
         }
 
         // destructor
@@ -98,16 +98,17 @@ namespace lazy_manager.hook
             if (code >= 0)
             {
                 Keys key = (Keys)lParam.vkCode;
-                Debug.Print(key.ToString());
                 if (HookedKeys.Contains(key))
                 {
                     KeyEventArgs eventKey = new KeyEventArgs(key);
                     if ((wParam == WM_KEYDOWN || wParam == WM_SYSKEYDOWN) && (KeyDown != null))
                     {
+                        Debug.Print(key.ToString());
+
                         if (key == Keys.F1 || key == Keys.F2 || key == Keys.F3 || key == Keys.F4)
                         {
-                            MessageBox.Show("Key Pressed :" + key.ToString());
                             KeyDown(this, eventKey);
+                            MessageBox.Show("Key Pressed :" + key.ToString());
                         }
                     }
                     else if ((wParam == WM_KEYUP || wParam == WM_SYSKEYUP) && (KeyUp != null))
@@ -117,10 +118,10 @@ namespace lazy_manager.hook
                             KeyUp(this, eventKey);
                     }
                     if (eventKey.Handled)
-                        return (Int32)1; // return 1값을 주게 되면 해당키가 잠김
+                        return 1; // return 1값을 주게 되면 해당키가 잠김
                 }
             }
-            return (Int32)0; // 1값도 아니고 CallNextHookEx 도 쓰지 않음. -> 이로써 그 프로세스에 키값을 보내지 않음.
+            return 0; // 1값도 아니고 CallNextHookEx 도 쓰지 않음. -> 이로써 그 프로세스에 키값을 보내지 않음.
             // return CallNextHookEx(hhook, code, wParam, ref lParam); -> 프로세스에도 메세지를 보냄.
         }
     }

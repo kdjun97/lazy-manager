@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using lazy_manager.hook;
 using System.IO;
 using lazy_manager.Model;
+using lazy_manager.Script;
 
 namespace lazy_manager
 {
@@ -111,11 +112,12 @@ namespace lazy_manager
         // Read Script
         private void readScriptToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Script.ReadScript readScript = new Script.ReadScript();
+            ReadScript readScript = new Script.ReadScript();
+            HotkeySetting hotkeySetting = new HotkeySetting();
             List<Tuple<char, string>> list = readScript.ReadScriptLine(editBox.Text);
             Debug.Print("----------readScript 끝-----------");
 
-            List<HotkeyModel> hotkeyModel = readScript.HotkeySetting(list);
+            List<HotkeyModel> hotkeyModel = hotkeySetting.SetHotkeyModelList(list);
             Debug.Print("Hotkey Model Length = " + hotkeyModel.Count());
             for (int i=0; i<hotkeyModel.Count(); i++)
             {
@@ -126,6 +128,9 @@ namespace lazy_manager
                     Debug.Write("["+ hotkeyModel[i].GetCommand()[j].Item1.ToString() + "]" + hotkeyModel[i].GetCommand()[j].Item2.ToString() + " ");
                 Debug.Print("");
             }
+
+            Debug.Print("-----------hotkey model setting 끝----------");
+            new GlobalKeyBoardHook();
         }
     }
 }
