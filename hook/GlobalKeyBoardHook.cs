@@ -101,6 +101,7 @@ namespace lazy_manager.hook
             if (code >= 0)
             {
                 Keys key = (Keys)lParam.vkCode;
+                //Debug.Print(key.ToString());
                 if (HookedKeys.Contains(key))
                 {
                     KeyEventArgs eventKey = new KeyEventArgs(key);
@@ -108,7 +109,7 @@ namespace lazy_manager.hook
                     {
                         Debug.Print(key.ToString());
 
-                        if (key == Keys.F1 || key == Keys.F2 || key == Keys.F3 || key == Keys.F4)
+                        //if (key == Keys.F1 || key == Keys.F2 || key == Keys.F3 || key == Keys.F4)
                         {
                             KeyDown(this, eventKey);
                             MessageBox.Show("Key Pressed :" + key.ToString());

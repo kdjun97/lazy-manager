@@ -66,10 +66,12 @@ namespace lazy_manager.Script
 
             try
             {
+                Keys k = (Keys)Enum.Parse(typeof(Keys), "LControlKey", true);
+                hookedKeys.Add(k);
                 for (int index = 0; index < hotkeyModel.Count(); index++)
                 {
                     string tempKeyCode = "0x" + hotkeyModel[index].GetHotkey();
-                    hookedKeys.Add(StringToKey(tempKeyCode));                    
+                    hookedKeys.Add(StringToKey(tempKeyCode));
 
                 }
             } catch (Exception eMsg)
@@ -99,7 +101,9 @@ namespace lazy_manager.Script
                         key = Keys.F3;
                         break;
                     default:
-                        throw new Exception("Key Code Error");
+                        key = Keys.None;
+                        // throw new Exception("Key Code Error");
+                        break;
                 }
             } catch (Exception eMsg)
             {
