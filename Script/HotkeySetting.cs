@@ -5,12 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using lazy_manager.Model;
+using System.Windows.Forms;
 
 namespace lazy_manager.Script
 {
     class HotkeySetting
     {
-        // 핫키를 셋팅해주는 함수
+        
+        // 핫키 모델 리스트를 셋팅해주는 함수
         public List<HotkeyModel> SetHotkeyModelList(List<Tuple<char, string>> parsedData)
         {
             // 초기 버전은 loop 없이 q만 허용
@@ -55,6 +57,57 @@ namespace lazy_manager.Script
             }
 
             return hotkeyList;
+        }
+
+        // 핫키를 셋팅해주는 함수
+        public List<Keys> SetHotkey(List<HotkeyModel> hotkeyModel)
+        {
+            List<Keys> hookedKeys = new List<Keys>();
+
+            try
+            {
+                for (int index = 0; index < hotkeyModel.Count(); index++)
+                {
+                    string tempKeyCode = "0x" + hotkeyModel[index].GetHotkey();
+                    hookedKeys.Add(StringToKey(tempKeyCode));                    
+
+                }
+            } catch (Exception eMsg)
+            {
+                Debug.Print(eMsg.Message);
+            }
+            return hookedKeys;
+        }
+
+        // input 키코드를 처리해줌
+        public Keys StringToKey(string keyCode)
+        {
+            Keys key = new Keys();
+
+            try
+            {
+                switch (keyCode)
+                {
+                    case "0x70":
+                        Debug.Print("0x70찾음");
+                        key = Keys.F1;
+                        break;
+                    case "0x71":
+                        key = Keys.F2;
+                        break;
+                    case "0x72":
+                        key = Keys.F3;
+                        break;
+                    default:
+                        throw new Exception("Key Code Error");
+                }
+            } catch (Exception eMsg)
+            {
+                Debug.Print(eMsg.Message);
+            }
+            
+
+            return key;
         }
     }
 }

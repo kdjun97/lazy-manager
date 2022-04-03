@@ -129,8 +129,12 @@ namespace lazy_manager
                 Debug.Print("");
             }
 
-            Debug.Print("-----------hotkey model setting 끝----------");
-            new GlobalKeyBoardHook();
+            Debug.Print("-----------hotkey model list setting 끝----------");
+
+            List<Keys> hookedKeys = new List<Keys>();
+            hookedKeys = hotkeySetting.SetHotkey(hotkeyModel);
+
+            new GlobalKeyBoardHook(hookedKeys);
         }
     }
 }

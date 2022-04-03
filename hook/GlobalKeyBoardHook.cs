@@ -35,13 +35,15 @@ namespace lazy_manager.hook
 
         public delegate int keyboardHookProc(int code, int wParam, ref keyboardHookStruct lParam);
 
+        public List<Keys> HookedKeys = new List<Keys>();
+
         // When hooked key pressed
         public event KeyEventHandler KeyDown;
 
         // When hooked key released
         public event KeyEventHandler KeyUp;
 
-        public List<Keys> HookedKeys = new List<Keys>();
+        // public List<Keys> HookedKeys = new List<Keys>();
         IntPtr hhook = IntPtr.Zero;
 
         // CallbackOnCollectedDelegate 예외 처리를 위해서 생성함.
@@ -57,9 +59,10 @@ namespace lazy_manager.hook
         }
         
         // constructor
-        public GlobalKeyBoardHook()
+        public GlobalKeyBoardHook(List<Keys> hookedKeys)
         {
-            HookedKeys.Add(Keys.F1);
+            //HookedKeys.Add(Keys.F1);
+            HookedKeys = hookedKeys;
             KeyDown += new KeyEventHandler(KeyDownEvent);
             hook();
         }
