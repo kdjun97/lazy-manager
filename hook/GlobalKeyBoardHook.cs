@@ -61,7 +61,6 @@ namespace lazy_manager.hook
         // constructor
         public GlobalKeyBoardHook(List<Keys> hookedKeys)
         {
-            //HookedKeys.Add(Keys.F1);
             HookedKeys = hookedKeys;
             KeyDown += new KeyEventHandler(KeyDownEvent);
             hook();
@@ -107,13 +106,10 @@ namespace lazy_manager.hook
                     KeyEventArgs eventKey = new KeyEventArgs(key);
                     if ((wParam == WM_KEYDOWN || wParam == WM_SYSKEYDOWN) && (KeyDown != null))
                     {
-                        Debug.Print(key.ToString());
+                        Debug.Print("["+ key.ToString() + "]키가 눌렸습니다");
 
-                        //if (key == Keys.F1 || key == Keys.F2 || key == Keys.F3 || key == Keys.F4)
-                        {
-                            KeyDown(this, eventKey);
-                            MessageBox.Show("Key Pressed :" + key.ToString());
-                        }
+                        KeyDown(this, eventKey);
+                        MessageBox.Show("Key Pressed :" + key.ToString());
                     }
                     else if ((wParam == WM_KEYUP || wParam == WM_SYSKEYUP) && (KeyUp != null))
                     {
