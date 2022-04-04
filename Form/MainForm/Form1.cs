@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Diagnostics;
 using System.Windows.Forms;
 using lazy_manager.hook;
@@ -118,7 +113,7 @@ namespace lazy_manager
         // Read Script
         private void readScriptToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ReadScript readScript = new Script.ReadScript();
+            ReadScript readScript = new ReadScript();
             HotkeySetting hotkeySetting = new HotkeySetting();
             List<Tuple<char, string>> list = readScript.ReadScriptLine(editBox.Text);
             Debug.Print("----------readScript 끝-----------");
