@@ -57,6 +57,9 @@ namespace lazy_manager
             } catch (ArgumentException eMsg) // 빈 경로일 때,
             {
                 Debug.Print(eMsg.Message);
+            } catch (Exception eMsg)
+            {
+                Debug.Print(eMsg.Message);
             }
         }
 
@@ -84,6 +87,9 @@ namespace lazy_manager
                 {
                     Debug.Print(eMsg.Message);
                 } catch (ArgumentException eMsg) // 빈 경로일 때,
+                {
+                    Debug.Print(eMsg.Message);
+                } catch (Exception eMsg)
                 {
                     Debug.Print(eMsg.Message);
                 }
@@ -117,7 +123,7 @@ namespace lazy_manager
             List<Tuple<char, string>> list = readScript.ReadScriptLine(editBox.Text);
             Debug.Print("----------readScript 끝-----------");
 
-            List<HotkeyModel> hotkeyModel = hotkeySetting.SetHotkeyModelList(list);
+            List<HotkeyModel> hotkeyModel = readScript.SetHotkeyModelList(list);
             Debug.Print("Hotkey Model Length = " + hotkeyModel.Count());
             for (int i=0; i<hotkeyModel.Count(); i++)
             {
