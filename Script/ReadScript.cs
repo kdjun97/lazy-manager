@@ -47,10 +47,13 @@ namespace lazy_manager.Script
                 
             } catch (IndexOutOfRangeException eMsg)
             {
-                Debug.Print(eMsg.ToString());
+                Debug.Print(eMsg.Message);
             } catch (ArgumentOutOfRangeException eMsg)
             {
-                Debug.Print(eMsg.ToString());
+                Debug.Print(eMsg.Message);
+            } catch  (Exception eMsg)
+            {
+                Debug.Print(eMsg.Message);
             }
             return list;
         }
