@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using lazy_manager.Model;
+using lazy_manager.Event;
 
 namespace lazy_manager.hook
 {
@@ -36,6 +35,8 @@ namespace lazy_manager.hook
         public delegate int keyboardHookProc(int code, int wParam, ref keyboardHookStruct lParam);
 
         public List<Keys> HookedKeys = new List<Keys>();
+        List<HotkeyModel> hotkeyModel;
+        KeyboardEvent keyboardEvent = new KeyboardEvent();
 
         // When hooked key pressed
         public event KeyEventHandler KeyDown;
@@ -59,8 +60,9 @@ namespace lazy_manager.hook
         }
         
         // constructor
-        public GlobalKeyBoardHook(List<Keys> hookedKeys)
+        public GlobalKeyBoardHook(List<Keys> hookedKeys, List<HotkeyModel> hotkeyModel)
         {
+            this.hotkeyModel = hotkeyModel;
             HookedKeys = hookedKeys;
             KeyDown += new KeyEventHandler(KeyDownEvent);
             hook();
@@ -108,8 +110,10 @@ namespace lazy_manager.hook
                     {
                         Debug.Print("["+ key.ToString() + "]키가 눌렸습니다");
 
+                        Debug.Print("Index:" + HookedKeys.IndexOf(key));
+                        keyboardEvent.KeyboardEventHandle(hotkeyModel[HookedKeys.IndexOf(key)]);
                         KeyDown(this, eventKey);
-                        MessageBox.Show("Key Pressed :" + key.ToString());
+                        //MessageBox.Show("Key Pressed :" + key.ToString());
                     }
                     else if ((wParam == WM_KEYUP || wParam == WM_SYSKEYUP) && (KeyUp != null))
                     {

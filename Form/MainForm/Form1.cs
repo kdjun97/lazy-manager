@@ -135,7 +135,7 @@ namespace lazy_manager
             List<Keys> hookedKeys = new List<Keys>();
             hookedKeys = hotkeySetting.SetHotkey(hotkeyModel);
 
-            new GlobalKeyBoardHook(hookedKeys);
+            new GlobalKeyBoardHook(hookedKeys, hotkeyModel);
         }
     }
 }
