@@ -31,4 +31,4 @@
   - [Lazy Manager2](https://kdjun97.github.io/blog/Lazy_Manager2/)
 
 # TODO
-  * Hooking + Hotkey
+  * Define, stack push function 기능 검증
