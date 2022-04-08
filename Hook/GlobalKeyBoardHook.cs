@@ -33,8 +33,8 @@ namespace lazy_manager.hook
         #endregion
 
         public delegate int keyboardHookProc(int code, int wParam, ref keyboardHookStruct lParam);
+        private static keyboardHookProc callbackDelegate;
 
-        public List<Keys> HookedKeys = new List<Keys>();
         List<HotkeyModel> hotkeyModel;
         KeyboardEvent keyboardEvent = new KeyboardEvent();
 
@@ -44,11 +44,11 @@ namespace lazy_manager.hook
         // When hooked key released
         public event KeyEventHandler KeyUp;
 
-        // public List<Keys> HookedKeys = new List<Keys>();
+        public List<Keys> HookedKeys = new List<Keys>();
         IntPtr hhook = IntPtr.Zero;
 
         // CallbackOnCollectedDelegate 예외 처리를 위해서 생성함.
-        keyboardHookProc handler;
+        // keyboardHookProc handler;
 
         public struct keyboardHookStruct
         {
@@ -58,17 +58,24 @@ namespace lazy_manager.hook
             public int time;
             public int dwExtraInfo;
         }
-        
+
         // constructor
         public GlobalKeyBoardHook(List<Keys> hookedKeys, List<HotkeyModel> hotkeyModel)
         {
             this.hotkeyModel = hotkeyModel;
             HookedKeys = hookedKeys;
             KeyDown += new KeyEventHandler(KeyDownEvent);
+            KeyUp += new KeyEventHandler(KeyUpEvent);
+
             hook();
         }
 
         public void KeyDownEvent(object sender, KeyEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        public void KeyUpEvent(object sender, KeyEventArgs e)
         {
             e.Handled = true;
         }
@@ -82,18 +89,32 @@ namespace lazy_manager.hook
         // global hook install
         public void hook()
         {
-            IntPtr hInstance = LoadLibrary("User32");
+            if (callbackDelegate != null)
+                callbackDelegate = null; // only one hook
 
+            IntPtr hInstance = LoadLibrary("User32");
+            callbackDelegate = new keyboardHookProc(hookProc);
+            hhook = SetWindowsHookEx(WH_KEYBOARD_LL, callbackDelegate, hInstance, 0);
+            if (hhook == IntPtr.Zero)
+                throw new Exception();
+
+            /*
             this.handler = new keyboardHookProc(hookProc); // 핸들러를 설정해주었고, 그걸 hookProc에 두번 일하게했음.
             // 이걸 파라미터 2번째에 넣음. 일을 두번한거지만 그렇게 됨으로 CallbackOnCollectedDelegate 예외를 처리해줄수있음.
             hhook = SetWindowsHookEx(WH_KEYBOARD_LL, this.handler, hInstance, 0); // 계속 참조값을 가지고 있기 때문에 예외에 안걸릴 수 있음.
+            */
             MessageBox.Show("훅 걸림");
         }
 
         // global hook uninstall
         public void unhook()
         {
-            UnhookWindowsHookEx(hhook);
+            if (callbackDelegate == null)
+                return;
+
+            if (!UnhookWindowsHookEx(hhook))
+                throw new Exception("unhook exception");
+            callbackDelegate = null;
             MessageBox.Show("훅 풀림");
         }
 
@@ -111,22 +132,22 @@ namespace lazy_manager.hook
                         Debug.Print("["+ key.ToString() + "]키가 눌렸습니다");
 
                         Debug.Print("Index:" + HookedKeys.IndexOf(key));
-                        keyboardEvent.KeyboardEventHandle(hotkeyModel[HookedKeys.IndexOf(key)]);
+                        
                         KeyDown(this, eventKey);
+                        keyboardEvent.KeyboardEventHandle(hotkeyModel[HookedKeys.IndexOf(key)]);
                         //MessageBox.Show("Key Pressed :" + key.ToString());
                     }
                     else if ((wParam == WM_KEYUP || wParam == WM_SYSKEYUP) && (KeyUp != null))
                     {
                         //MessageBox.Show("방금 떼진건 " + key.ToString());
-                        if (key == Keys.F1 || key == Keys.F3)
-                            KeyUp(this, eventKey);
+                        KeyUp(this, eventKey);
                     }
                     if (eventKey.Handled)
                         return 1; // return 1값을 주게 되면 해당키가 잠김
                 }
             }
-            return 0; // 1값도 아니고 CallNextHookEx 도 쓰지 않음. -> 이로써 그 프로세스에 키값을 보내지 않음.
-            // return CallNextHookEx(hhook, code, wParam, ref lParam); -> 프로세스에도 메세지를 보냄.
+            // return 0; // 1값도 아니고 CallNextHookEx 도 쓰지 않음. -> 이로써 그 프로세스에 키값을 보내지 않음.
+            return CallNextHookEx(hhook, code, wParam, ref lParam); // -> 프로세스에도 메세지를 보냄.
         }
     }
 }
