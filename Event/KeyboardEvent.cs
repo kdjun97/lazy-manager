@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Threading;
+using System.Threading.Tasks;
 using lazy_manager.Model;
 
 namespace lazy_manager.Event
@@ -18,7 +19,7 @@ namespace lazy_manager.Event
 
         VirtualKeyModel virtualKeyModel = new VirtualKeyModel();
 
-        public void KeyboardEventHandle(HotkeyModel hotkeyModel)
+        public async void KeyboardEventHandle(HotkeyModel hotkeyModel)
         {
             try
             {
@@ -35,13 +36,15 @@ namespace lazy_manager.Event
                                 virtualKeyModel.GetVirtualKeyModel().ContainsKey(command.Item2.Substring(1));
                                 keybd_event(virtualKeyModel.GetVirtualKeyModel()[command.Item2.Substring(1)], 0, 0x00, (UIntPtr)0);
                             }
-                            else if (command.Item2[0] == 'D') // KEY UP
+                            else if (command.Item2[0] == 'U') // KEY UP
                             {
-                                keybd_event(Convert.ToByte((command.Item2).Substring(1)), 0, 0x02, (UIntPtr)0);
+                                virtualKeyModel.GetVirtualKeyModel().ContainsKey(command.Item2.Substring(1));
+                                keybd_event(virtualKeyModel.GetVirtualKeyModel()[command.Item2.Substring(1)], 0, 0x02, (UIntPtr)0);
                             }
                             break;
                         case 's':
-                            Thread.Sleep(int.Parse(command.Item2));
+                            await Task.Delay(int.Parse(command.Item2));
+                            //Thread.Sleep(int.Parse(command.Item2));
                             break;
                         case 'q':
                             break;
