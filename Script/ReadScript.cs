@@ -39,7 +39,17 @@ namespace lazy_manager.Script
                     lineCut = line.Split(','); // split ','가 없어도 처리가 됨
 
                     for (int i = 0; i < lineCut.Count(); i++)
-                        list.Add(Tuple.Create(symbol, lineCut[i])); // 각 심볼과 키값을 list에 넣음
+                    {
+                        // '('가 포함되어있으면 ')'까지 한개의 string으로 취급. 
+                        // 현재는 () 안에 x,y좌표만 들어가기 때문에 두개의 lineCut을 합쳐 하나로 취급해주면 됨.
+                        if (lineCut[i].Contains("("))
+                        {
+                            list.Add(Tuple.Create(symbol, (lineCut[i]+","+lineCut[++i]))); // ','삽입. 나중에 split을 위함
+                            continue;
+                        }
+                        else
+                            list.Add(Tuple.Create(symbol, lineCut[i])); // 각 심볼과 키값을 list에 넣음
+                    }
 
                 }
                 
