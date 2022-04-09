@@ -31,4 +31,4 @@
   - [Lazy Manager2](https://kdjun97.github.io/blog/Lazy_Manager2/)
 
 # TODO
-  * Define, stack push function 기능 검증
+  * 화면 해상도 문제 해결 (배율관련)
