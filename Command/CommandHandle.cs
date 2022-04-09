@@ -6,12 +6,15 @@ using lazy_manager.Event;
 
 namespace lazy_manager.Command
 {
+    /// <summary>
+    /// 각 핫키들의 command를 처리해주는 클래스
+    /// </summary>
     class CommandHandle
     {
         KeyboardEvent keyboardEvent = new KeyboardEvent();
 
         /// <summary>
-        /// 핫키의 명령어들을 핸들해줌.
+        /// 핫키 모델의 특수 명령들을 처리해줌 ex)k,m,s,q
         /// </summary>
         /// <param name="hotkeyModel"></param>
         public async void HotkeyCommandHandle(HotkeyModel hotkeyModel)
