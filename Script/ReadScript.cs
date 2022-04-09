@@ -46,7 +46,7 @@ namespace lazy_manager.Script
                         {
                             list.Add(Tuple.Create(symbol, (lineCut[i]+","+lineCut[++i]))); // ','삽입. 나중에 split을 위함
                             continue;
-                        }
+                      }
                         else
                             list.Add(Tuple.Create(symbol, lineCut[i])); // 각 심볼과 키값을 list에 넣음
                     }
