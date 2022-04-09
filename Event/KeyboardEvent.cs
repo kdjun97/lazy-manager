@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
-using System.Threading;
-using System.Threading.Tasks;
 using lazy_manager.Model;
 
 namespace lazy_manager.Event
@@ -17,49 +15,36 @@ namespace lazy_manager.Event
 
         #endregion
 
+        #region const value
+        const int KEY_DOWN = 0x00;
+        const int KEY_UP = 0x02;
+        #endregion 
+
+        // for byte bVk (virtual key)
         VirtualKeyModel virtualKeyModel = new VirtualKeyModel();
 
-        public async void KeyboardEventHandle(HotkeyModel hotkeyModel)
+        public void KeyboardEventHandle(string command)
         {
             try
             {
-                foreach(Tuple<char, string> command in hotkeyModel.GetCommand())
+                Debug.Print(command.ToString());
+                switch (command[0])
                 {
-                    Debug.Print(command.ToString());
-                    switch (command.Item1) {
-                        case 'k':
-                            if (command.Item2[0] == 'D') // KEY DOWN
-                            {
-                                // TODO: Map<string, byte> 를 가지고 hard coding 후, 
-                                // command 배열 들어오는걸 mapping시켜 배열을 다시 만듦
-                                Debug.Print("Target:" + command.Item2.Substring(1));
-                                virtualKeyModel.GetVirtualKeyModel().ContainsKey(command.Item2.Substring(1));
-                                keybd_event(virtualKeyModel.GetVirtualKeyModel()[command.Item2.Substring(1)], 0, 0x00, (UIntPtr)0);
-                            }
-                            else if (command.Item2[0] == 'U') // KEY UP
-                            {
-                                virtualKeyModel.GetVirtualKeyModel().ContainsKey(command.Item2.Substring(1));
-                                keybd_event(virtualKeyModel.GetVirtualKeyModel()[command.Item2.Substring(1)], 0, 0x02, (UIntPtr)0);
-                            }
-                            break;
-                        case 's':
-                            await Task.Delay(int.Parse(command.Item2));
-                            //Thread.Sleep(int.Parse(command.Item2));
-                            break;
-                        case 'q':
-                            break;
-                        default:
-                            throw new Exception("지금 단계에선 구현x");
-                    }
-                    
+                    case 'D': // KEY DOWN
+                        keybd_event(virtualKeyModel.GetVirtualKeyModel()[command.Substring(1)], 0, KEY_DOWN, (UIntPtr)0);
+                        break;
+                    case 'U': // KEY UP
+                        keybd_event(virtualKeyModel.GetVirtualKeyModel()[command.Substring(1)], 0, KEY_UP, (UIntPtr)0);
+                        break;
+                    case 'K': // KEY DOWN and KEY UP
+                        keybd_event(virtualKeyModel.GetVirtualKeyModel()[command.Substring(1)], 0, KEY_DOWN, (UIntPtr)0);
+                        keybd_event(virtualKeyModel.GetVirtualKeyModel()[command.Substring(1)], 0, KEY_UP, (UIntPtr)0);
+                        break;
                 }
-                Debug.Print("");
             } catch (Exception eMsg)
             {
                 Debug.Print(eMsg.Message);
             }
         }
-
-
     }
 }
