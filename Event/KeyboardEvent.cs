@@ -32,7 +32,7 @@ namespace lazy_manager.Event
         VirtualKeyModel virtualKeyModel = new VirtualKeyModel();
 
         /// <summary>
-        /// input 명령어에 대한 처리 후, keybd_event를 날려주는 함수
+        /// 들어오는 command param에 대한 처리 후, keybd_event를 날려주는 함수
         /// </summary>
         /// <param name="command">D30같은 명령어</param>
         public void KeyboardEventHandle(string command)
