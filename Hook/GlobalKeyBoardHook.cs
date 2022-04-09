@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using System.Diagnostics;
 using lazy_manager.Model;
-using lazy_manager.Event;
+using lazy_manager.Command;
 
 namespace lazy_manager.hook
 {
@@ -36,7 +36,9 @@ namespace lazy_manager.hook
         private static keyboardHookProc callbackDelegate;
 
         List<HotkeyModel> hotkeyModel;
-        KeyboardEvent keyboardEvent = new KeyboardEvent();
+
+        // 명령어를 처리하기 위한 constructor
+        CommandHandle commandHandle = new CommandHandle();
 
         // When hooked key pressed
         public event KeyEventHandler KeyDown;
@@ -97,12 +99,7 @@ namespace lazy_manager.hook
             hhook = SetWindowsHookEx(WH_KEYBOARD_LL, callbackDelegate, hInstance, 0);
             if (hhook == IntPtr.Zero)
                 throw new Exception();
-
-            /*
-            this.handler = new keyboardHookProc(hookProc); // 핸들러를 설정해주었고, 그걸 hookProc에 두번 일하게했음.
-            // 이걸 파라미터 2번째에 넣음. 일을 두번한거지만 그렇게 됨으로 CallbackOnCollectedDelegate 예외를 처리해줄수있음.
-            hhook = SetWindowsHookEx(WH_KEYBOARD_LL, this.handler, hInstance, 0); // 계속 참조값을 가지고 있기 때문에 예외에 안걸릴 수 있음.
-            */
+           
             MessageBox.Show("훅 걸림");
         }
 
@@ -134,7 +131,8 @@ namespace lazy_manager.hook
                         Debug.Print("Index:" + HookedKeys.IndexOf(key));
                         
                         KeyDown(this, eventKey);
-                        keyboardEvent.KeyboardEventHandle(hotkeyModel[HookedKeys.IndexOf(key)]);
+                        commandHandle.HotkeyCommandHandle(hotkeyModel[HookedKeys.IndexOf(key)]);
+                        //keyboardEvent.KeyboardEventHandle(hotkeyModel[HookedKeys.IndexOf(key)]);
                         //MessageBox.Show("Key Pressed :" + key.ToString());
                     }
                     else if ((wParam == WM_KEYUP || wParam == WM_SYSKEYUP) && (KeyUp != null))
