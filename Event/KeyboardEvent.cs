@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using lazy_manager.Model;
+using lazy_manager.Enums;
 
 namespace lazy_manager.Event
 {
@@ -22,11 +23,7 @@ namespace lazy_manager.Event
         public static extern void keybd_event(byte bVk, byte bScan, uint dwFlags, UIntPtr dwExtraInfo);
 
         #endregion
-
-        #region const value
-        const int KEY_DOWN = 0x00;
-        const int KEY_UP = 0x02;
-        #endregion 
+        
 
         // for byte bVk (virtual key)
         VirtualKeyModel virtualKeyModel = new VirtualKeyModel();
@@ -43,14 +40,14 @@ namespace lazy_manager.Event
                 switch (command[0])
                 {
                     case 'D': // KEY DOWN
-                        keybd_event(virtualKeyModel.GetVirtualKeyModel()[command.Substring(1)], 0, KEY_DOWN, (UIntPtr)0);
+                        keybd_event(virtualKeyModel.GetVirtualKeyModel()[command.Substring(1)], 0, (int)KeyboardEnum.KEY_DOWN, (UIntPtr)0);
                         break;
                     case 'U': // KEY UP
-                        keybd_event(virtualKeyModel.GetVirtualKeyModel()[command.Substring(1)], 0, KEY_UP, (UIntPtr)0);
+                        keybd_event(virtualKeyModel.GetVirtualKeyModel()[command.Substring(1)], 0, (int)KeyboardEnum.KEY_UP, (UIntPtr)0);
                         break;
                     case 'K': // KEY DOWN and KEY UP
-                        keybd_event(virtualKeyModel.GetVirtualKeyModel()[command.Substring(1)], 0, KEY_DOWN, (UIntPtr)0);
-                        keybd_event(virtualKeyModel.GetVirtualKeyModel()[command.Substring(1)], 0, KEY_UP, (UIntPtr)0);
+                        keybd_event(virtualKeyModel.GetVirtualKeyModel()[command.Substring(1)], 0, (int)KeyboardEnum.KEY_DOWN, (UIntPtr)0);
+                        keybd_event(virtualKeyModel.GetVirtualKeyModel()[command.Substring(1)], 0, (int)KeyboardEnum.KEY_UP, (UIntPtr)0);
                         break;
                     default:
                         throw new Exception("예외: 등록되지 않은 키보드 명령");

@@ -5,19 +5,13 @@ using System.Windows.Forms;
 using System.Diagnostics;
 using lazy_manager.Model;
 using lazy_manager.Command;
+using lazy_manager.Enums;
+using lazy_manager.Struct;
 
 namespace lazy_manager.hook
 {
     class GlobalKeyBoardHook
-    {
-        # region const value
-        const int WH_KEYBOARD_LL = 13;
-        const int WM_KEYDOWN = 0x100;
-        const int WM_KEYUP = 0x101;
-        const int WM_SYSKEYDOWN = 0x104;
-        const int WM_SYSKEYUP = 0x105;
-        #endregion
-        
+    {   
         #region DLL imports
         [DllImport("user32.dll")]
         static extern IntPtr SetWindowsHookEx(int idHook, keyboardHookProc callback, IntPtr hInstance, uint threadId);
@@ -48,18 +42,6 @@ namespace lazy_manager.hook
 
         public List<Keys> HookedKeys = new List<Keys>();
         IntPtr hhook = IntPtr.Zero;
-
-        // CallbackOnCollectedDelegate 예외 처리를 위해서 생성함.
-        // keyboardHookProc handler;
-
-        public struct keyboardHookStruct
-        {
-            public int vkCode;
-            public int scanCode;
-            public int flags;
-            public int time;
-            public int dwExtraInfo;
-        }
 
         // constructor
         public GlobalKeyBoardHook(List<Keys> hookedKeys, List<HotkeyModel> hotkeyModel)
@@ -96,7 +78,7 @@ namespace lazy_manager.hook
 
             IntPtr hInstance = LoadLibrary("User32");
             callbackDelegate = new keyboardHookProc(hookProc);
-            hhook = SetWindowsHookEx(WH_KEYBOARD_LL, callbackDelegate, hInstance, 0);
+            hhook = SetWindowsHookEx((int)HookEnum.WH_KEYBOARD_LL, callbackDelegate, hInstance, 0);
             if (hhook == IntPtr.Zero)
                 throw new Exception();
            
@@ -124,7 +106,7 @@ namespace lazy_manager.hook
                 if (HookedKeys.Contains(key))
                 {
                     KeyEventArgs eventKey = new KeyEventArgs(key);
-                    if ((wParam == WM_KEYDOWN || wParam == WM_SYSKEYDOWN) && (KeyDown != null))
+                    if ((wParam == (int)HookEnum.WM_KEYDOWN || wParam == (int)HookEnum.WM_SYSKEYDOWN) && (KeyDown != null))
                     {
                         Debug.Print("["+ key.ToString() + "]키가 눌렸습니다");
 
@@ -135,7 +117,7 @@ namespace lazy_manager.hook
                         //keyboardEvent.KeyboardEventHandle(hotkeyModel[HookedKeys.IndexOf(key)]);
                         //MessageBox.Show("Key Pressed :" + key.ToString());
                     }
-                    else if ((wParam == WM_KEYUP || wParam == WM_SYSKEYUP) && (KeyUp != null))
+                    else if ((wParam == (int)HookEnum.WM_KEYUP || wParam == (int)HookEnum.WM_SYSKEYUP) && (KeyUp != null))
                     {
                         //MessageBox.Show("방금 떼진건 " + key.ToString());
                         KeyUp(this, eventKey);
