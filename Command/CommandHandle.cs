@@ -12,11 +12,12 @@ namespace lazy_manager.Command
     class CommandHandle
     {
         KeyboardEvent keyboardEvent = new KeyboardEvent();
+        MouseEvent mouseEvent = new MouseEvent();
 
         /// <summary>
         /// 핫키 모델의 특수 명령들을 처리해줌 ex)k,m,s,q
         /// </summary>
-        /// <param name="hotkeyModel"></param>
+        /// <param name="hotkeyModel">셋팅된 핫키 모델</param>
         public async void HotkeyCommandHandle(HotkeyModel hotkeyModel)
         {
             try
@@ -28,6 +29,7 @@ namespace lazy_manager.Command
                             keyboardEvent.KeyboardEventHandle(command.Item2);
                             break;
                         case 'm': // mouse_event
+                            mouseEvent.MouseEventHandle(command.Item2);
                             break;
                         case 's': // sleep
                             await Task.Delay(int.Parse(command.Item2));
