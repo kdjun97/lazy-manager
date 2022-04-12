@@ -31,4 +31,8 @@
   - [Lazy Manager2](https://kdjun97.github.io/blog/Lazy_Manager2/)
 
 # TODO
-  * StatusStrip, unHook 구현
+  * Info/Program Info -> Version -> History 나오게
+  * Virtual KeyCode 제작
+  * Func에 (Image Search) ~ing 추가
+  * Form에 추가될 text 혹은 기능?
+  * mouse position (mouse 전역 훅을 통한 좌표값 얻기 기능)
