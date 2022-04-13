@@ -2,10 +2,8 @@
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.InteropServices;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using lazy_manager.Enums;
-using lazy_manager.Display;
+using lazy_manager.Position;
 
 namespace lazy_manager.Event
 {
@@ -21,41 +19,29 @@ namespace lazy_manager.Event
 
         #endregion
 
-        DisplayResolution displayResolution = new DisplayResolution();
-        
-        
+        MousePosition mousePosition = new MousePosition();
+
         /// <summary>
         /// 들어오는 파라미터 명령어에 따른 마우스 이벤트 날리는 함수
         /// </summary>
         /// <param name="command">mouse_event command (Ex: MouseMove, click)</param>
         public void MouseEventHandle(string command)
         {
-            Debug.Print("x=" + displayResolution.GetDisplayResolution().Width + "y" + displayResolution.GetDisplayResolution().Height);
             try
             {
-                // Display 해상도 값을 가져올 시, 배율 문제 (배율은 100%로 설정해야함)
                 switch (command.Substring(0,2))
                 {
                     case "MV": // Mouse Move
-                        string[] commandSubstring = command.Split(',');
-
-                        int x = int.Parse(commandSubstring[0].Substring(3));
-                        int y = int.Parse(commandSubstring[1].Substring(0, commandSubstring[1].Length-1));
-                        Debug.Print("x="+x+"y="+y);
-
-                        Rectangle rtScreen = Screen.PrimaryScreen.Bounds;
-                        int nX = (65535 * x / rtScreen.Width);
-                        int nY = (65535 * y / rtScreen.Height);
-                        mouse_event((uint)MouseEnum.ABSOLUTE | (uint)MouseEnum.MOUSEMOVE, nX, nY, 0, 0);
-
-                        //mouse_event(ABSOLUTE | MOUSEMOVE, (65535 / 1920) * x, (65535 / 1080) * y, 0, 0);
+                        Size mouseXY = mousePosition.GetMousePosition(command);
+                        mouse_event((uint)MouseEnum.ABSOLUTE | (uint)MouseEnum.MOUSEMOVE, mouseXY.Width, mouseXY.Height, 0, 0);
                         break;
                     case "LC": // Mouse Left Click
-                        //mouse_event(ABSOLUTE | MOVE | LEFTDOWN, (65535/1080) * 20, (65535/1024) * 20, 0, 0);
-                        Debug.Print("LClick");
+                        mouse_event((uint)MouseEnum.ABSOLUTE | (uint)MouseEnum.LEFTDOWN, 0, 0, 0, 0);
+                        mouse_event((uint)MouseEnum.ABSOLUTE | (uint)MouseEnum.LEFTUP, 0, 0, 0, 0);
                         break;
                     case "RC": // Mouse Right Click
-                        Debug.Print("Right Click");
+                        mouse_event((uint)MouseEnum.ABSOLUTE | (uint)MouseEnum.RIGHTDOWN, 0, 0, 0, 0);
+                        mouse_event((uint)MouseEnum.ABSOLUTE | (uint)MouseEnum.RIGHTUP, 0, 0, 0, 0);
                         break;
                     default: // Exception
                         throw new Exception("예외: 등록되지 않은 마우스 명령");
