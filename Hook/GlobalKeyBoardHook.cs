@@ -10,6 +10,9 @@ using lazy_manager.Struct;
 
 namespace lazy_manager.hook
 {
+    /// <summary>
+    /// Global Keyboard Hooking class
+    /// </summary>
     class GlobalKeyBoardHook
     {   
         #region DLL imports
@@ -29,6 +32,7 @@ namespace lazy_manager.hook
         public delegate int keyboardHookProc(int code, int wParam, ref keyboardHookStruct lParam);
         private static keyboardHookProc callbackDelegate;
 
+        // 핫키 모델이 들어갈 모델
         List<HotkeyModel> hotkeyModel;
 
         // 명령어를 처리하기 위한 constructor
@@ -40,8 +44,9 @@ namespace lazy_manager.hook
         // When hooked key released
         public event KeyEventHandler KeyUp;
 
+        // 후킹된 키가 들어갈 list
         public List<Keys> HookedKeys = new List<Keys>();
-        IntPtr hhook = IntPtr.Zero;
+        public IntPtr hhook = IntPtr.Zero;
 
         // constructor
         public GlobalKeyBoardHook(List<Keys> hookedKeys, List<HotkeyModel> hotkeyModel)
@@ -75,13 +80,14 @@ namespace lazy_manager.hook
         {
             if (callbackDelegate != null)
                 callbackDelegate = null; // only one hook
-
+            
             IntPtr hInstance = LoadLibrary("User32");
             callbackDelegate = new keyboardHookProc(hookProc);
             hhook = SetWindowsHookEx((int)HookEnum.WH_KEYBOARD_LL, callbackDelegate, hInstance, 0);
+
             if (hhook == IntPtr.Zero)
                 throw new Exception();
-           
+            
             MessageBox.Show("훅 걸림");
         }
 
@@ -102,31 +108,24 @@ namespace lazy_manager.hook
             if (code >= 0)
             {
                 Keys key = (Keys)lParam.vkCode;
-                //Debug.Print(key.ToString());
                 if (HookedKeys.Contains(key))
                 {
                     KeyEventArgs eventKey = new KeyEventArgs(key);
                     if ((wParam == (int)HookEnum.WM_KEYDOWN || wParam == (int)HookEnum.WM_SYSKEYDOWN) && (KeyDown != null))
                     {
                         Debug.Print("["+ key.ToString() + "]키가 눌렸습니다");
-
-                        Debug.Print("Index:" + HookedKeys.IndexOf(key));
                         
                         KeyDown(this, eventKey);
                         commandHandle.HotkeyCommandHandle(hotkeyModel[HookedKeys.IndexOf(key)]);
-                        //keyboardEvent.KeyboardEventHandle(hotkeyModel[HookedKeys.IndexOf(key)]);
-                        //MessageBox.Show("Key Pressed :" + key.ToString());
                     }
                     else if ((wParam == (int)HookEnum.WM_KEYUP || wParam == (int)HookEnum.WM_SYSKEYUP) && (KeyUp != null))
                     {
-                        //MessageBox.Show("방금 떼진건 " + key.ToString());
                         KeyUp(this, eventKey);
                     }
                     if (eventKey.Handled)
                         return 1; // return 1값을 주게 되면 해당키가 잠김
                 }
             }
-            // return 0; // 1값도 아니고 CallNextHookEx 도 쓰지 않음. -> 이로써 그 프로세스에 키값을 보내지 않음.
             return CallNextHookEx(hhook, code, wParam, ref lParam); // -> 프로세스에도 메세지를 보냄.
         }
     }
