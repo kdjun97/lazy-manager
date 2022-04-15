@@ -7,6 +7,8 @@ using lazy_manager.hook;
 using System.IO;
 using lazy_manager.Model;
 using lazy_manager.Script;
+using lazy_manager.Display;
+using System.Drawing;
 
 namespace lazy_manager
 {
@@ -113,12 +115,14 @@ namespace lazy_manager
         // Read Script
         private void readScriptToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            DisplayResolution.SetDisplayResolution(); // setting display resolution
             ReadScript readScript = new ReadScript();
             HotkeySetting hotkeySetting = new HotkeySetting();
+            HotkeyModelListSetting hotkeyModelListSetting = new HotkeyModelListSetting();
             List<Tuple<char, string>> list = readScript.ReadScriptLine(editBox.Text);
             Debug.Print("----------readScript 끝-----------");
 
-            List<HotkeyModel> hotkeyModel = readScript.SetHotkeyModelList(list);
+            List<HotkeyModel> hotkeyModel = hotkeyModelListSetting.SetHotkeyModelList(list);
             Debug.Print("Hotkey Model Length = " + hotkeyModel.Count());
             for (int i=0; i<hotkeyModel.Count(); i++)
             {
@@ -134,11 +138,13 @@ namespace lazy_manager
 
             List<Keys> hookedKeys = new List<Keys>();
             hookedKeys = hotkeySetting.SetHotkey(hotkeyModel);
-
-            //GlobalKeyBoardHook globalKeyBoardHook = new GlobalKeyBoardHook(hotkeyModel);
-            //globalKeyBoardHook.HookedKeys.Add(Keys.F1);
-
+            
             GlobalKeyBoardHook globalKeyBoardHook = new GlobalKeyBoardHook(hookedKeys, hotkeyModel);
+            if (globalKeyBoardHook.hhook != IntPtr.Zero)
+            {
+                toolStripStatusLabel2.Text = "Hooking";
+                toolStripStatusLabel2.ForeColor = Color.Red;
+            }
         }
     }
 }

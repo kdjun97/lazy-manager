@@ -36,7 +36,7 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.funcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.readScriptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unhookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,10 +45,17 @@
             this.virtualKeyCodeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.editBox = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.readScriptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.checkDisplayResolutionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.emailToToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kdjun97gmailcomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.version01ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.제작자김동준ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -83,33 +90,33 @@
             // newFileToolStripMenuItem
             // 
             this.newFileToolStripMenuItem.Name = "newFileToolStripMenuItem";
-            this.newFileToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.newFileToolStripMenuItem.Size = new System.Drawing.Size(142, 26);
             this.newFileToolStripMenuItem.Text = "New File";
             this.newFileToolStripMenuItem.Click += new System.EventHandler(this.newFileToolStripMenuItem_Click);
             // 
             // loadFileToolStripMenuItem
             // 
             this.loadFileToolStripMenuItem.Name = "loadFileToolStripMenuItem";
-            this.loadFileToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.loadFileToolStripMenuItem.Size = new System.Drawing.Size(142, 26);
             this.loadFileToolStripMenuItem.Text = "Load";
             this.loadFileToolStripMenuItem.Click += new System.EventHandler(this.loadFileToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(142, 26);
             this.saveToolStripMenuItem.Text = "Save As";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(213, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(139, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(142, 26);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -117,28 +124,29 @@
             // 
             this.funcToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.readScriptToolStripMenuItem,
-            this.hookToolStripMenuItem,
             this.unhookToolStripMenuItem});
             this.funcToolStripMenuItem.Name = "funcToolStripMenuItem";
             this.funcToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
             this.funcToolStripMenuItem.Text = "Func";
             // 
-            // hookToolStripMenuItem
+            // readScriptToolStripMenuItem
             // 
-            this.hookToolStripMenuItem.Name = "hookToolStripMenuItem";
-            this.hookToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.hookToolStripMenuItem.Text = "hook";
+            this.readScriptToolStripMenuItem.Name = "readScriptToolStripMenuItem";
+            this.readScriptToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
+            this.readScriptToolStripMenuItem.Text = "Read Script";
+            this.readScriptToolStripMenuItem.Click += new System.EventHandler(this.readScriptToolStripMenuItem_Click);
             // 
             // unhookToolStripMenuItem
             // 
             this.unhookToolStripMenuItem.Name = "unhookToolStripMenuItem";
-            this.unhookToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.unhookToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.unhookToolStripMenuItem.Text = "unhook";
             // 
             // settingToolStripMenuItem
             // 
             this.settingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ingToolStripMenuItem});
+            this.ingToolStripMenuItem,
+            this.checkDisplayResolutionToolStripMenuItem});
             this.settingToolStripMenuItem.Name = "settingToolStripMenuItem";
             this.settingToolStripMenuItem.Size = new System.Drawing.Size(69, 24);
             this.settingToolStripMenuItem.Text = "Setting";
@@ -146,22 +154,26 @@
             // ingToolStripMenuItem
             // 
             this.ingToolStripMenuItem.Name = "ingToolStripMenuItem";
-            this.ingToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.ingToolStripMenuItem.Size = new System.Drawing.Size(117, 26);
             this.ingToolStripMenuItem.Text = "~ing";
             // 
             // infoToolStripMenuItem
             // 
             this.infoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.virtualKeyCodeToolStripMenuItem,
             this.programInfoToolStripMenuItem,
-            this.virtualKeyCodeToolStripMenuItem});
+            this.emailToToolStripMenuItem});
             this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
             this.infoToolStripMenuItem.Size = new System.Drawing.Size(48, 24);
             this.infoToolStripMenuItem.Text = "Info";
             // 
             // programInfoToolStripMenuItem
             // 
+            this.programInfoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.version01ToolStripMenuItem,
+            this.제작자김동준ToolStripMenuItem});
             this.programInfoToolStripMenuItem.Name = "programInfoToolStripMenuItem";
-            this.programInfoToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
+            this.programInfoToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.programInfoToolStripMenuItem.Text = "Program Info";
             // 
             // virtualKeyCodeToolStripMenuItem
@@ -175,7 +187,10 @@
             // 
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
+            this.toolStripStatusLabel1,
+            this.toolStripStatusLabel2,
+            this.toolStripStatusLabel4,
+            this.toolStripStatusLabel3});
             this.statusStrip1.Location = new System.Drawing.Point(0, 351);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(413, 25);
@@ -187,6 +202,12 @@
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(58, 20);
             this.toolStripStatusLabel1.Text = "Status :";
+            // 
+            // toolStripStatusLabel2
+            // 
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(46, 20);
+            this.toolStripStatusLabel2.Text = "None";
             // 
             // editBox
             // 
@@ -203,12 +224,53 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // readScriptToolStripMenuItem
+            // toolStripStatusLabel3
             // 
-            this.readScriptToolStripMenuItem.Name = "readScriptToolStripMenuItem";
-            this.readScriptToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.readScriptToolStripMenuItem.Text = "Read Script";
-            this.readScriptToolStripMenuItem.Click += new System.EventHandler(this.readScriptToolStripMenuItem_Click);
+            this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(112, 20);
+            this.toolStripStatusLabel3.Text = "제작자 : 김동준";
+            // 
+            // toolStripStatusLabel4
+            // 
+            this.toolStripStatusLabel4.Name = "toolStripStatusLabel4";
+            this.toolStripStatusLabel4.Size = new System.Drawing.Size(143, 20);
+            this.toolStripStatusLabel4.Spring = true;
+            this.toolStripStatusLabel4.Text = "Version 0.1";
+            // 
+            // checkDisplayResolutionToolStripMenuItem
+            // 
+            this.checkDisplayResolutionToolStripMenuItem.Name = "checkDisplayResolutionToolStripMenuItem";
+            this.checkDisplayResolutionToolStripMenuItem.Size = new System.Drawing.Size(257, 26);
+            this.checkDisplayResolutionToolStripMenuItem.Text = "Check Display Resolution";
+            // 
+            // emailToToolStripMenuItem
+            // 
+            this.emailToToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.kdjun97gmailcomToolStripMenuItem});
+            this.emailToToolStripMenuItem.Name = "emailToToolStripMenuItem";
+            this.emailToToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.emailToToolStripMenuItem.Text = "Email to";
+            // 
+            // kdjun97gmailcomToolStripMenuItem
+            // 
+            this.kdjun97gmailcomToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.kdjun97gmailcomToolStripMenuItem.Name = "kdjun97gmailcomToolStripMenuItem";
+            this.kdjun97gmailcomToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.kdjun97gmailcomToolStripMenuItem.Text = "kdjun97@gmail.com";
+            // 
+            // version01ToolStripMenuItem
+            // 
+            this.version01ToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
+            this.version01ToolStripMenuItem.Name = "version01ToolStripMenuItem";
+            this.version01ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.version01ToolStripMenuItem.Text = "Version 0.1";
+            // 
+            // 제작자김동준ToolStripMenuItem
+            // 
+            this.제작자김동준ToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.제작자김동준ToolStripMenuItem.Name = "제작자김동준ToolStripMenuItem";
+            this.제작자김동준ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.제작자김동준ToolStripMenuItem.Text = "제작자@김동준";
             // 
             // Form1
             // 
@@ -241,7 +303,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem funcToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem hookToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem unhookToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem settingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ingToolStripMenuItem;
@@ -254,6 +315,14 @@
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripMenuItem readScriptToolStripMenuItem;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel4;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
+        private System.Windows.Forms.ToolStripMenuItem checkDisplayResolutionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem version01ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 제작자김동준ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem emailToToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kdjun97gmailcomToolStripMenuItem;
     }
 }
 
