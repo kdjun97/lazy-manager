@@ -87,7 +87,6 @@
             this.button57 = new System.Windows.Forms.Button();
             this.button58 = new System.Windows.Forms.Button();
             this.button59 = new System.Windows.Forms.Button();
-            this.button60 = new System.Windows.Forms.Button();
             this.button61 = new System.Windows.Forms.Button();
             this.button62 = new System.Windows.Forms.Button();
             this.button63 = new System.Windows.Forms.Button();
@@ -95,6 +94,44 @@
             this.button65 = new System.Windows.Forms.Button();
             this.button66 = new System.Windows.Forms.Button();
             this.button67 = new System.Windows.Forms.Button();
+            this.button60 = new System.Windows.Forms.Button();
+            this.button68 = new System.Windows.Forms.Button();
+            this.button69 = new System.Windows.Forms.Button();
+            this.button70 = new System.Windows.Forms.Button();
+            this.button71 = new System.Windows.Forms.Button();
+            this.button72 = new System.Windows.Forms.Button();
+            this.button73 = new System.Windows.Forms.Button();
+            this.button74 = new System.Windows.Forms.Button();
+            this.button75 = new System.Windows.Forms.Button();
+            this.button76 = new System.Windows.Forms.Button();
+            this.button77 = new System.Windows.Forms.Button();
+            this.button79 = new System.Windows.Forms.Button();
+            this.button80 = new System.Windows.Forms.Button();
+            this.button81 = new System.Windows.Forms.Button();
+            this.button82 = new System.Windows.Forms.Button();
+            this.button83 = new System.Windows.Forms.Button();
+            this.button78 = new System.Windows.Forms.Button();
+            this.button84 = new System.Windows.Forms.Button();
+            this.button85 = new System.Windows.Forms.Button();
+            this.button86 = new System.Windows.Forms.Button();
+            this.button87 = new System.Windows.Forms.Button();
+            this.button88 = new System.Windows.Forms.Button();
+            this.button89 = new System.Windows.Forms.Button();
+            this.button90 = new System.Windows.Forms.Button();
+            this.button91 = new System.Windows.Forms.Button();
+            this.button93 = new System.Windows.Forms.Button();
+            this.button94 = new System.Windows.Forms.Button();
+            this.button95 = new System.Windows.Forms.Button();
+            this.button97 = new System.Windows.Forms.Button();
+            this.button98 = new System.Windows.Forms.Button();
+            this.button99 = new System.Windows.Forms.Button();
+            this.button100 = new System.Windows.Forms.Button();
+            this.button101 = new System.Windows.Forms.Button();
+            this.button102 = new System.Windows.Forms.Button();
+            this.button103 = new System.Windows.Forms.Button();
+            this.button104 = new System.Windows.Forms.Button();
+            this.button106 = new System.Windows.Forms.Button();
+            this.button107 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button15
@@ -117,7 +154,7 @@
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(50, 50);
             this.button14.TabIndex = 15;
-            this.button14.Text = "~\r\n   `\r\n0x";
+            this.button14.Text = "~\r\n   `\r\n0xC0";
             this.button14.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button14.UseVisualStyleBackColor = true;
             // 
@@ -232,12 +269,12 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button1.Location = new System.Drawing.Point(581, 30);
+            this.button1.Location = new System.Drawing.Point(580, 30);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(50, 50);
             this.button1.TabIndex = 35;
-            this.button1.Text = "\r\n  F9\r\n0x";
+            this.button1.Text = "\r\n  F9\r\n0x78";
             this.button1.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button1.UseVisualStyleBackColor = true;
             // 
@@ -249,7 +286,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(50, 50);
             this.button2.TabIndex = 34;
-            this.button2.Text = "\r\n F10\r\n0x";
+            this.button2.Text = "\r\n F10\r\n0x79";
             this.button2.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button2.UseVisualStyleBackColor = true;
             // 
@@ -261,7 +298,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(50, 50);
             this.button3.TabIndex = 33;
-            this.button3.Text = "\r\n  F8\r\n0x";
+            this.button3.Text = "\r\n  F8\r\n0x77";
             this.button3.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button3.UseVisualStyleBackColor = true;
             // 
@@ -273,7 +310,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(50, 50);
             this.button4.TabIndex = 32;
-            this.button4.Text = "\r\n  F7\r\n0x";
+            this.button4.Text = "\r\n  F7\r\n0x76";
             this.button4.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button4.UseVisualStyleBackColor = true;
             // 
@@ -285,7 +322,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(50, 50);
             this.button5.TabIndex = 31;
-            this.button5.Text = "\r\n  F5\r\n0x";
+            this.button5.Text = "\r\n  F5\r\n0x74";
             this.button5.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button5.UseVisualStyleBackColor = true;
             // 
@@ -297,7 +334,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(50, 50);
             this.button6.TabIndex = 30;
-            this.button6.Text = "\r\n  F6\r\n0x";
+            this.button6.Text = "\r\n  F6\r\n0x75";
             this.button6.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button6.UseVisualStyleBackColor = true;
             // 
@@ -309,19 +346,19 @@
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(50, 50);
             this.button7.TabIndex = 29;
-            this.button7.Text = "\r\n  F4\r\n0x";
+            this.button7.Text = "\r\n  F4\r\n0x73";
             this.button7.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button7.UseVisualStyleBackColor = true;
             // 
             // button8
             // 
             this.button8.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button8.Location = new System.Drawing.Point(181, 30);
+            this.button8.Location = new System.Drawing.Point(180, 30);
             this.button8.Margin = new System.Windows.Forms.Padding(0);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(50, 50);
             this.button8.TabIndex = 28;
-            this.button8.Text = "\r\n  F2\r\n0x";
+            this.button8.Text = "\r\n  F2\r\n0x71";
             this.button8.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button8.UseVisualStyleBackColor = true;
             // 
@@ -333,7 +370,7 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(50, 50);
             this.button9.TabIndex = 27;
-            this.button9.Text = "\r\n  F3\r\n0x";
+            this.button9.Text = "\r\n  F3\r\n0x72";
             this.button9.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button9.UseVisualStyleBackColor = true;
             // 
@@ -345,7 +382,7 @@
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(50, 50);
             this.button10.TabIndex = 26;
-            this.button10.Text = "\r\n ESC\r\n0x";
+            this.button10.Text = "\r\n ESC\r\n0x1B";
             this.button10.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button10.UseVisualStyleBackColor = true;
             // 
@@ -357,7 +394,7 @@
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(50, 50);
             this.button11.TabIndex = 25;
-            this.button11.Text = "\r\n   F1\r\n0x";
+            this.button11.Text = "\r\n   F1\r\n0x70";
             this.button11.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button11.UseVisualStyleBackColor = true;
             // 
@@ -369,7 +406,7 @@
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(50, 50);
             this.button12.TabIndex = 37;
-            this.button12.Text = "\r\n F11\r\n0x";
+            this.button12.Text = "\r\n F11\r\n0x7A";
             this.button12.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button12.UseVisualStyleBackColor = true;
             // 
@@ -381,7 +418,7 @@
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(50, 50);
             this.button13.TabIndex = 36;
-            this.button13.Text = "\r\n F12\r\n0x";
+            this.button13.Text = "\r\n F12\r\n0x7B";
             this.button13.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button13.UseVisualStyleBackColor = true;
             // 
@@ -393,7 +430,7 @@
             this.button25.Name = "button25";
             this.button25.Size = new System.Drawing.Size(75, 50);
             this.button25.TabIndex = 38;
-            this.button25.Text = "\r\n    Tab\r\n0x";
+            this.button25.Text = "\r\n    Tab\r\n0x09";
             this.button25.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button25.UseVisualStyleBackColor = true;
             // 
@@ -405,7 +442,7 @@
             this.button26.Name = "button26";
             this.button26.Size = new System.Drawing.Size(50, 50);
             this.button26.TabIndex = 48;
-            this.button26.Text = "O\r\n   o\r\n0x";
+            this.button26.Text = "O\r\n   o\r\n0x4F";
             this.button26.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button26.UseVisualStyleBackColor = true;
             // 
@@ -417,7 +454,7 @@
             this.button27.Name = "button27";
             this.button27.Size = new System.Drawing.Size(50, 50);
             this.button27.TabIndex = 47;
-            this.button27.Text = "P\r\n   p\r\n0x";
+            this.button27.Text = "P\r\n   p\r\n0x50";
             this.button27.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button27.UseVisualStyleBackColor = true;
             // 
@@ -429,7 +466,7 @@
             this.button28.Name = "button28";
             this.button28.Size = new System.Drawing.Size(50, 50);
             this.button28.TabIndex = 46;
-            this.button28.Text = "I\r\n   i\r\n0x";
+            this.button28.Text = "I\r\n   i\r\n0x49";
             this.button28.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button28.UseVisualStyleBackColor = true;
             // 
@@ -441,7 +478,7 @@
             this.button29.Name = "button29";
             this.button29.Size = new System.Drawing.Size(50, 50);
             this.button29.TabIndex = 45;
-            this.button29.Text = "U\r\n   u\r\n0x";
+            this.button29.Text = "U\r\n   u\r\n0x55";
             this.button29.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button29.UseVisualStyleBackColor = true;
             // 
@@ -453,7 +490,7 @@
             this.button30.Name = "button30";
             this.button30.Size = new System.Drawing.Size(50, 50);
             this.button30.TabIndex = 44;
-            this.button30.Text = "T\r\n   t\r\n0x";
+            this.button30.Text = "T\r\n   t\r\n0x54";
             this.button30.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button30.UseVisualStyleBackColor = true;
             // 
@@ -465,7 +502,7 @@
             this.button31.Name = "button31";
             this.button31.Size = new System.Drawing.Size(50, 50);
             this.button31.TabIndex = 43;
-            this.button31.Text = "Y\r\n   y\r\n0x";
+            this.button31.Text = "Y\r\n   y\r\n0x59";
             this.button31.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button31.UseVisualStyleBackColor = true;
             // 
@@ -477,7 +514,7 @@
             this.button32.Name = "button32";
             this.button32.Size = new System.Drawing.Size(50, 50);
             this.button32.TabIndex = 42;
-            this.button32.Text = "R\r\n   r\r\n0x";
+            this.button32.Text = "R\r\n   r\r\n0x52";
             this.button32.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button32.UseVisualStyleBackColor = true;
             // 
@@ -489,7 +526,7 @@
             this.button33.Name = "button33";
             this.button33.Size = new System.Drawing.Size(50, 50);
             this.button33.TabIndex = 41;
-            this.button33.Text = "W\r\n   w\r\n0x";
+            this.button33.Text = "W\r\n   w\r\n0x57";
             this.button33.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button33.UseVisualStyleBackColor = true;
             // 
@@ -501,7 +538,7 @@
             this.button34.Name = "button34";
             this.button34.Size = new System.Drawing.Size(50, 50);
             this.button34.TabIndex = 40;
-            this.button34.Text = "E\r\n   e\r\n0x";
+            this.button34.Text = "E\r\n   e\r\n0x45";
             this.button34.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button34.UseVisualStyleBackColor = true;
             // 
@@ -513,7 +550,7 @@
             this.button35.Name = "button35";
             this.button35.Size = new System.Drawing.Size(50, 50);
             this.button35.TabIndex = 39;
-            this.button35.Text = "Q\r\n   q\r\n0x";
+            this.button35.Text = "Q\r\n   q\r\n0x51";
             this.button35.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button35.UseVisualStyleBackColor = true;
             // 
@@ -525,7 +562,7 @@
             this.button36.Name = "button36";
             this.button36.Size = new System.Drawing.Size(50, 50);
             this.button36.TabIndex = 50;
-            this.button36.Text = "{\r\n   [\r\n0x";
+            this.button36.Text = "{\r\n   [\r\n0xDB";
             this.button36.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button36.UseVisualStyleBackColor = true;
             // 
@@ -537,7 +574,7 @@
             this.button37.Name = "button37";
             this.button37.Size = new System.Drawing.Size(50, 50);
             this.button37.TabIndex = 49;
-            this.button37.Text = "}\r\n   ]\r\n0x";
+            this.button37.Text = "}\r\n   ]\r\n0xDD";
             this.button37.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button37.UseVisualStyleBackColor = true;
             // 
@@ -549,7 +586,7 @@
             this.button38.Name = "button38";
             this.button38.Size = new System.Drawing.Size(50, 50);
             this.button38.TabIndex = 52;
-            this.button38.Text = "ㅡ\r\n   -\r\n0x";
+            this.button38.Text = "ㅡ\r\n   -\r\n0xBD";
             this.button38.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button38.UseVisualStyleBackColor = true;
             // 
@@ -561,7 +598,7 @@
             this.button39.Name = "button39";
             this.button39.Size = new System.Drawing.Size(50, 50);
             this.button39.TabIndex = 51;
-            this.button39.Text = "+\r\n   =\r\n0x";
+            this.button39.Text = "+\r\n   =\r\n0xBB";
             this.button39.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button39.UseVisualStyleBackColor = true;
             // 
@@ -573,7 +610,7 @@
             this.button40.Name = "button40";
             this.button40.Size = new System.Drawing.Size(100, 50);
             this.button40.TabIndex = 53;
-            this.button40.Text = "←\r\n  backspace\r\n0x";
+            this.button40.Text = "←\r\n  backspace\r\n0x08";
             this.button40.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button40.UseVisualStyleBackColor = true;
             // 
@@ -585,7 +622,7 @@
             this.button41.Name = "button41";
             this.button41.Size = new System.Drawing.Size(75, 50);
             this.button41.TabIndex = 54;
-            this.button41.Text = "|\r\n      \\\r\n0x";
+            this.button41.Text = "|\r\n      \\\r\n0xDC";
             this.button41.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button41.UseVisualStyleBackColor = true;
             // 
@@ -597,7 +634,7 @@
             this.button42.Name = "button42";
             this.button42.Size = new System.Drawing.Size(101, 50);
             this.button42.TabIndex = 55;
-            this.button42.Text = "\r\n   Caps Lock\r\n0x";
+            this.button42.Text = "\r\n   Caps Lock\r\n0x14";
             this.button42.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button42.UseVisualStyleBackColor = true;
             // 
@@ -609,7 +646,7 @@
             this.button43.Name = "button43";
             this.button43.Size = new System.Drawing.Size(50, 50);
             this.button43.TabIndex = 65;
-            this.button43.Text = "L\r\n   l\r\n0x";
+            this.button43.Text = "L\r\n   l\r\n0x4C";
             this.button43.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button43.UseVisualStyleBackColor = true;
             // 
@@ -621,7 +658,7 @@
             this.button44.Name = "button44";
             this.button44.Size = new System.Drawing.Size(50, 50);
             this.button44.TabIndex = 64;
-            this.button44.Text = ":\r\n   ;\r\n0x";
+            this.button44.Text = ":\r\n   ;\r\n0xBA";
             this.button44.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button44.UseVisualStyleBackColor = true;
             // 
@@ -633,7 +670,7 @@
             this.button45.Name = "button45";
             this.button45.Size = new System.Drawing.Size(50, 50);
             this.button45.TabIndex = 63;
-            this.button45.Text = "K\r\n   k\r\n0x";
+            this.button45.Text = "K\r\n   k\r\n0x4B";
             this.button45.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button45.UseVisualStyleBackColor = true;
             // 
@@ -645,7 +682,7 @@
             this.button46.Name = "button46";
             this.button46.Size = new System.Drawing.Size(50, 50);
             this.button46.TabIndex = 62;
-            this.button46.Text = "J\r\n   j\r\n0x";
+            this.button46.Text = "J\r\n   j\r\n0x4A";
             this.button46.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button46.UseVisualStyleBackColor = true;
             // 
@@ -657,7 +694,7 @@
             this.button47.Name = "button47";
             this.button47.Size = new System.Drawing.Size(50, 50);
             this.button47.TabIndex = 61;
-            this.button47.Text = "G\r\n   g\r\n0x";
+            this.button47.Text = "G\r\n   g\r\n0x47";
             this.button47.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button47.UseVisualStyleBackColor = true;
             // 
@@ -669,7 +706,7 @@
             this.button48.Name = "button48";
             this.button48.Size = new System.Drawing.Size(50, 50);
             this.button48.TabIndex = 60;
-            this.button48.Text = "H\r\n   h\r\n0x";
+            this.button48.Text = "H\r\n   h\r\n0x48";
             this.button48.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button48.UseVisualStyleBackColor = true;
             // 
@@ -681,7 +718,7 @@
             this.button49.Name = "button49";
             this.button49.Size = new System.Drawing.Size(50, 50);
             this.button49.TabIndex = 59;
-            this.button49.Text = "F\r\n   f\r\n0x";
+            this.button49.Text = "F\r\n   f\r\n0x46";
             this.button49.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button49.UseVisualStyleBackColor = true;
             // 
@@ -693,7 +730,7 @@
             this.button50.Name = "button50";
             this.button50.Size = new System.Drawing.Size(50, 50);
             this.button50.TabIndex = 58;
-            this.button50.Text = "S\r\n   s\r\n0x";
+            this.button50.Text = "S\r\n   s\r\n0x53";
             this.button50.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button50.UseVisualStyleBackColor = true;
             // 
@@ -705,7 +742,7 @@
             this.button51.Name = "button51";
             this.button51.Size = new System.Drawing.Size(50, 50);
             this.button51.TabIndex = 57;
-            this.button51.Text = "D\r\n   d\r\n0x";
+            this.button51.Text = "D\r\n   d\r\n0x44";
             this.button51.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button51.UseVisualStyleBackColor = true;
             // 
@@ -717,7 +754,7 @@
             this.button52.Name = "button52";
             this.button52.Size = new System.Drawing.Size(50, 50);
             this.button52.TabIndex = 56;
-            this.button52.Text = "A\r\n   a\r\n0x";
+            this.button52.Text = "A\r\n   a\r\n0x41";
             this.button52.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button52.UseVisualStyleBackColor = true;
             // 
@@ -729,7 +766,7 @@
             this.button53.Name = "button53";
             this.button53.Size = new System.Drawing.Size(50, 50);
             this.button53.TabIndex = 66;
-            this.button53.Text = "\"\r\n   \'\r\n0x";
+            this.button53.Text = "\"\r\n   \'\r\n0xDE";
             this.button53.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button53.UseVisualStyleBackColor = true;
             // 
@@ -741,7 +778,7 @@
             this.button54.Name = "button54";
             this.button54.Size = new System.Drawing.Size(100, 50);
             this.button54.TabIndex = 67;
-            this.button54.Text = "\r\n      Enter\r\n0x";
+            this.button54.Text = "\r\n      Enter\r\n0x0D";
             this.button54.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button54.UseVisualStyleBackColor = true;
             // 
@@ -753,7 +790,7 @@
             this.button55.Name = "button55";
             this.button55.Size = new System.Drawing.Size(125, 50);
             this.button55.TabIndex = 68;
-            this.button55.Text = "\r\n          Shift\r\n0x";
+            this.button55.Text = "\r\n          Shift\r\n0xA0";
             this.button55.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button55.UseVisualStyleBackColor = true;
             // 
@@ -765,7 +802,7 @@
             this.button56.Name = "button56";
             this.button56.Size = new System.Drawing.Size(50, 50);
             this.button56.TabIndex = 69;
-            this.button56.Text = "Z\r\n   z\r\n0x";
+            this.button56.Text = "Z\r\n   z\r\n0x5A";
             this.button56.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button56.UseVisualStyleBackColor = true;
             // 
@@ -777,7 +814,7 @@
             this.button57.Name = "button57";
             this.button57.Size = new System.Drawing.Size(50, 50);
             this.button57.TabIndex = 70;
-            this.button57.Text = "X\r\n   x\r\n0x";
+            this.button57.Text = "X\r\n   x\r\n0x58";
             this.button57.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button57.UseVisualStyleBackColor = true;
             // 
@@ -789,7 +826,7 @@
             this.button58.Name = "button58";
             this.button58.Size = new System.Drawing.Size(50, 50);
             this.button58.TabIndex = 72;
-            this.button58.Text = "V\r\n   v\r\n0x";
+            this.button58.Text = "V\r\n   v\r\n0x56";
             this.button58.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button58.UseVisualStyleBackColor = true;
             // 
@@ -801,21 +838,9 @@
             this.button59.Name = "button59";
             this.button59.Size = new System.Drawing.Size(50, 50);
             this.button59.TabIndex = 71;
-            this.button59.Text = "C\r\n   c\r\n0x";
+            this.button59.Text = "C\r\n   c\r\n0x43";
             this.button59.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button59.UseVisualStyleBackColor = true;
-            // 
-            // button60
-            // 
-            this.button60.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button60.Location = new System.Drawing.Point(505, 260);
-            this.button60.Margin = new System.Windows.Forms.Padding(0);
-            this.button60.Name = "button60";
-            this.button60.Size = new System.Drawing.Size(50, 50);
-            this.button60.TabIndex = 76;
-            this.button60.Text = "A\r\n   a\r\n0x";
-            this.button60.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button60.UseVisualStyleBackColor = true;
             // 
             // button61
             // 
@@ -825,7 +850,7 @@
             this.button61.Name = "button61";
             this.button61.Size = new System.Drawing.Size(50, 50);
             this.button61.TabIndex = 75;
-            this.button61.Text = "M\r\n   m\r\n0x";
+            this.button61.Text = "M\r\n   m\r\n0x4D";
             this.button61.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button61.UseVisualStyleBackColor = true;
             // 
@@ -837,7 +862,7 @@
             this.button62.Name = "button62";
             this.button62.Size = new System.Drawing.Size(50, 50);
             this.button62.TabIndex = 74;
-            this.button62.Text = "N\r\n   n\r\n0x";
+            this.button62.Text = "N\r\n   n\r\n0x4E";
             this.button62.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button62.UseVisualStyleBackColor = true;
             // 
@@ -849,68 +874,561 @@
             this.button63.Name = "button63";
             this.button63.Size = new System.Drawing.Size(50, 50);
             this.button63.TabIndex = 73;
-            this.button63.Text = "B\r\n   b\r\n0x";
+            this.button63.Text = "B\r\n   b\r\n0x42";
             this.button63.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button63.UseVisualStyleBackColor = true;
             // 
             // button64
             // 
             this.button64.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button64.Location = new System.Drawing.Point(705, 260);
+            this.button64.Location = new System.Drawing.Point(655, 260);
             this.button64.Margin = new System.Windows.Forms.Padding(0);
             this.button64.Name = "button64";
-            this.button64.Size = new System.Drawing.Size(75, 50);
+            this.button64.Size = new System.Drawing.Size(125, 50);
             this.button64.TabIndex = 80;
-            this.button64.Text = "\r\n    Shift\r\n0x";
+            this.button64.Text = "\r\n          Shift\r\n0xA1";
             this.button64.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button64.UseVisualStyleBackColor = true;
             // 
             // button65
             // 
             this.button65.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button65.Location = new System.Drawing.Point(655, 260);
+            this.button65.Location = new System.Drawing.Point(605, 260);
             this.button65.Margin = new System.Windows.Forms.Padding(0);
             this.button65.Name = "button65";
             this.button65.Size = new System.Drawing.Size(50, 50);
             this.button65.TabIndex = 79;
-            this.button65.Text = "?\r\n   /\r\n0x";
+            this.button65.Text = "?\r\n   /\r\n0xBF";
             this.button65.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button65.UseVisualStyleBackColor = true;
             // 
             // button66
             // 
             this.button66.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button66.Location = new System.Drawing.Point(605, 260);
+            this.button66.Location = new System.Drawing.Point(555, 260);
             this.button66.Margin = new System.Windows.Forms.Padding(0);
             this.button66.Name = "button66";
             this.button66.Size = new System.Drawing.Size(50, 50);
             this.button66.TabIndex = 78;
-            this.button66.Text = ">\r\n   .\r\n0x";
+            this.button66.Text = ">\r\n   .\r\n0xBE";
             this.button66.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button66.UseVisualStyleBackColor = true;
             // 
             // button67
             // 
             this.button67.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button67.Location = new System.Drawing.Point(555, 260);
+            this.button67.Location = new System.Drawing.Point(505, 260);
             this.button67.Margin = new System.Windows.Forms.Padding(0);
             this.button67.Name = "button67";
             this.button67.Size = new System.Drawing.Size(50, 50);
             this.button67.TabIndex = 77;
-            this.button67.Text = "<\r\n   ,\r\n0x";
+            this.button67.Text = "<\r\n   ,\r\n0xBC";
             this.button67.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button67.UseVisualStyleBackColor = true;
+            // 
+            // button60
+            // 
+            this.button60.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button60.Location = new System.Drawing.Point(30, 310);
+            this.button60.Margin = new System.Windows.Forms.Padding(0);
+            this.button60.Name = "button60";
+            this.button60.Size = new System.Drawing.Size(65, 50);
+            this.button60.TabIndex = 81;
+            this.button60.Text = "\r\n   Ctrl\r\n0xA2";
+            this.button60.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button60.UseVisualStyleBackColor = true;
+            // 
+            // button68
+            // 
+            this.button68.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button68.Location = new System.Drawing.Point(95, 310);
+            this.button68.Margin = new System.Windows.Forms.Padding(0);
+            this.button68.Name = "button68";
+            this.button68.Size = new System.Drawing.Size(65, 50);
+            this.button68.TabIndex = 82;
+            this.button68.Text = "\r\nWindow\r\n0x5B";
+            this.button68.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button68.UseVisualStyleBackColor = true;
+            // 
+            // button69
+            // 
+            this.button69.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button69.Location = new System.Drawing.Point(160, 310);
+            this.button69.Margin = new System.Windows.Forms.Padding(0);
+            this.button69.Name = "button69";
+            this.button69.Size = new System.Drawing.Size(65, 50);
+            this.button69.TabIndex = 83;
+            this.button69.Text = "\r\n    Alt\r\n0xA4";
+            this.button69.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button69.UseVisualStyleBackColor = true;
+            // 
+            // button70
+            // 
+            this.button70.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button70.Location = new System.Drawing.Point(715, 310);
+            this.button70.Margin = new System.Windows.Forms.Padding(0);
+            this.button70.Name = "button70";
+            this.button70.Size = new System.Drawing.Size(65, 50);
+            this.button70.TabIndex = 84;
+            this.button70.Text = "\r\n    Ctrl\r\n0xA3";
+            this.button70.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button70.UseVisualStyleBackColor = true;
+            // 
+            // button71
+            // 
+            this.button71.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button71.Location = new System.Drawing.Point(520, 310);
+            this.button71.Margin = new System.Windows.Forms.Padding(0);
+            this.button71.Name = "button71";
+            this.button71.Size = new System.Drawing.Size(65, 50);
+            this.button71.TabIndex = 85;
+            this.button71.Text = "\n  한/영\r\n0x15";
+            this.button71.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button71.UseVisualStyleBackColor = true;
+            // 
+            // button72
+            // 
+            this.button72.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button72.Location = new System.Drawing.Point(585, 310);
+            this.button72.Margin = new System.Windows.Forms.Padding(0);
+            this.button72.Name = "button72";
+            this.button72.Size = new System.Drawing.Size(65, 50);
+            this.button72.TabIndex = 87;
+            this.button72.Text = "\r\n    Alt\r\n0xA5";
+            this.button72.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button72.UseVisualStyleBackColor = true;
+            // 
+            // button73
+            // 
+            this.button73.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button73.Location = new System.Drawing.Point(650, 310);
+            this.button73.Margin = new System.Windows.Forms.Padding(0);
+            this.button73.Name = "button73";
+            this.button73.Size = new System.Drawing.Size(65, 50);
+            this.button73.TabIndex = 86;
+            this.button73.Text = "\r\nDO NOT\r\n   USE";
+            this.button73.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button73.UseVisualStyleBackColor = true;
+            // 
+            // button74
+            // 
+            this.button74.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button74.Location = new System.Drawing.Point(225, 310);
+            this.button74.Margin = new System.Windows.Forms.Padding(0);
+            this.button74.Name = "button74";
+            this.button74.Size = new System.Drawing.Size(295, 50);
+            this.button74.TabIndex = 88;
+            this.button74.Text = "\r\n                              Space\r\n0x20";
+            this.button74.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button74.UseVisualStyleBackColor = true;
+            // 
+            // button75
+            // 
+            this.button75.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button75.Location = new System.Drawing.Point(870, 30);
+            this.button75.Margin = new System.Windows.Forms.Padding(0);
+            this.button75.Name = "button75";
+            this.button75.Size = new System.Drawing.Size(50, 50);
+            this.button75.TabIndex = 91;
+            this.button75.Text = "scroll\r\n lock\r\n0x91";
+            this.button75.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button75.UseVisualStyleBackColor = true;
+            // 
+            // button76
+            // 
+            this.button76.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button76.Location = new System.Drawing.Point(920, 30);
+            this.button76.Margin = new System.Windows.Forms.Padding(0);
+            this.button76.Name = "button76";
+            this.button76.Size = new System.Drawing.Size(50, 50);
+            this.button76.TabIndex = 90;
+            this.button76.Text = "NOT\r\nUSE\r\n0x";
+            this.button76.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button76.UseVisualStyleBackColor = true;
+            // 
+            // button77
+            // 
+            this.button77.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button77.Location = new System.Drawing.Point(820, 30);
+            this.button77.Margin = new System.Windows.Forms.Padding(0);
+            this.button77.Name = "button77";
+            this.button77.Size = new System.Drawing.Size(50, 50);
+            this.button77.TabIndex = 89;
+            this.button77.Text = "PRT\r\nSCR\r\n0x2C";
+            this.button77.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button77.UseVisualStyleBackColor = true;
+            // 
+            // button79
+            // 
+            this.button79.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button79.Location = new System.Drawing.Point(920, 110);
+            this.button79.Margin = new System.Windows.Forms.Padding(0);
+            this.button79.Name = "button79";
+            this.button79.Size = new System.Drawing.Size(50, 50);
+            this.button79.TabIndex = 93;
+            this.button79.Text = "\r\n pgU\r\n0x21";
+            this.button79.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button79.UseVisualStyleBackColor = true;
+            // 
+            // button80
+            // 
+            this.button80.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button80.Location = new System.Drawing.Point(820, 110);
+            this.button80.Margin = new System.Windows.Forms.Padding(0);
+            this.button80.Name = "button80";
+            this.button80.Size = new System.Drawing.Size(50, 50);
+            this.button80.TabIndex = 92;
+            this.button80.Text = "\r\n  ins\r\n0x2D";
+            this.button80.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button80.UseVisualStyleBackColor = true;
+            // 
+            // button81
+            // 
+            this.button81.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button81.Location = new System.Drawing.Point(870, 160);
+            this.button81.Margin = new System.Windows.Forms.Padding(0);
+            this.button81.Name = "button81";
+            this.button81.Size = new System.Drawing.Size(50, 50);
+            this.button81.TabIndex = 97;
+            this.button81.Text = "\r\n end\r\n0x23";
+            this.button81.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button81.UseVisualStyleBackColor = true;
+            // 
+            // button82
+            // 
+            this.button82.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button82.Location = new System.Drawing.Point(920, 160);
+            this.button82.Margin = new System.Windows.Forms.Padding(0);
+            this.button82.Name = "button82";
+            this.button82.Size = new System.Drawing.Size(50, 50);
+            this.button82.TabIndex = 96;
+            this.button82.Text = "\r\n pgD\r\n0x22";
+            this.button82.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button82.UseVisualStyleBackColor = true;
+            // 
+            // button83
+            // 
+            this.button83.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button83.Location = new System.Drawing.Point(820, 160);
+            this.button83.Margin = new System.Windows.Forms.Padding(0);
+            this.button83.Name = "button83";
+            this.button83.Size = new System.Drawing.Size(50, 50);
+            this.button83.TabIndex = 95;
+            this.button83.Text = "\r\n del\r\n0x2E";
+            this.button83.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button83.UseVisualStyleBackColor = true;
+            // 
+            // button78
+            // 
+            this.button78.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button78.Location = new System.Drawing.Point(870, 110);
+            this.button78.Margin = new System.Windows.Forms.Padding(0);
+            this.button78.Name = "button78";
+            this.button78.Size = new System.Drawing.Size(50, 50);
+            this.button78.TabIndex = 98;
+            this.button78.Text = "\r\nhome\r\n0x24";
+            this.button78.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button78.UseVisualStyleBackColor = true;
+            // 
+            // button84
+            // 
+            this.button84.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button84.Location = new System.Drawing.Point(870, 310);
+            this.button84.Margin = new System.Windows.Forms.Padding(0);
+            this.button84.Name = "button84";
+            this.button84.Size = new System.Drawing.Size(50, 50);
+            this.button84.TabIndex = 99;
+            this.button84.Text = "\r\n   ↓\r\n0x28";
+            this.button84.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button84.UseVisualStyleBackColor = true;
+            // 
+            // button85
+            // 
+            this.button85.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button85.Location = new System.Drawing.Point(820, 310);
+            this.button85.Margin = new System.Windows.Forms.Padding(0);
+            this.button85.Name = "button85";
+            this.button85.Size = new System.Drawing.Size(50, 50);
+            this.button85.TabIndex = 100;
+            this.button85.Text = "\r\n   ←\r\n0x25";
+            this.button85.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button85.UseVisualStyleBackColor = true;
+            // 
+            // button86
+            // 
+            this.button86.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button86.Location = new System.Drawing.Point(870, 260);
+            this.button86.Margin = new System.Windows.Forms.Padding(0);
+            this.button86.Name = "button86";
+            this.button86.Size = new System.Drawing.Size(50, 50);
+            this.button86.TabIndex = 101;
+            this.button86.Text = "\r\n   ↑\r\n0x26";
+            this.button86.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button86.UseVisualStyleBackColor = true;
+            // 
+            // button87
+            // 
+            this.button87.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button87.Location = new System.Drawing.Point(920, 310);
+            this.button87.Margin = new System.Windows.Forms.Padding(0);
+            this.button87.Name = "button87";
+            this.button87.Size = new System.Drawing.Size(50, 50);
+            this.button87.TabIndex = 102;
+            this.button87.Text = "\r\n   →\r\n0x27";
+            this.button87.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button87.UseVisualStyleBackColor = true;
+            // 
+            // button88
+            // 
+            this.button88.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button88.Location = new System.Drawing.Point(1050, 110);
+            this.button88.Margin = new System.Windows.Forms.Padding(0);
+            this.button88.Name = "button88";
+            this.button88.Size = new System.Drawing.Size(50, 50);
+            this.button88.TabIndex = 105;
+            this.button88.Text = "\r\n    /\r\n0x6F";
+            this.button88.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button88.UseVisualStyleBackColor = true;
+            // 
+            // button89
+            // 
+            this.button89.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button89.Location = new System.Drawing.Point(1100, 110);
+            this.button89.Margin = new System.Windows.Forms.Padding(0);
+            this.button89.Name = "button89";
+            this.button89.Size = new System.Drawing.Size(50, 50);
+            this.button89.TabIndex = 104;
+            this.button89.Text = "\r\n   *\r\n0x6A";
+            this.button89.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button89.UseVisualStyleBackColor = true;
+            // 
+            // button90
+            // 
+            this.button90.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button90.Location = new System.Drawing.Point(1000, 110);
+            this.button90.Margin = new System.Windows.Forms.Padding(0);
+            this.button90.Name = "button90";
+            this.button90.Size = new System.Drawing.Size(50, 50);
+            this.button90.TabIndex = 103;
+            this.button90.Text = "Num\r\nLock\r\n0x90";
+            this.button90.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button90.UseVisualStyleBackColor = true;
+            // 
+            // button91
+            // 
+            this.button91.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button91.Location = new System.Drawing.Point(1150, 110);
+            this.button91.Margin = new System.Windows.Forms.Padding(0);
+            this.button91.Name = "button91";
+            this.button91.Size = new System.Drawing.Size(50, 50);
+            this.button91.TabIndex = 106;
+            this.button91.Text = "\r\n   -\r\n0x6D";
+            this.button91.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button91.UseVisualStyleBackColor = true;
+            // 
+            // button93
+            // 
+            this.button93.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button93.Location = new System.Drawing.Point(1050, 160);
+            this.button93.Margin = new System.Windows.Forms.Padding(0);
+            this.button93.Name = "button93";
+            this.button93.Size = new System.Drawing.Size(50, 50);
+            this.button93.TabIndex = 109;
+            this.button93.Text = "\r\n    8\r\n0x68";
+            this.button93.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button93.UseVisualStyleBackColor = true;
+            // 
+            // button94
+            // 
+            this.button94.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button94.Location = new System.Drawing.Point(1100, 160);
+            this.button94.Margin = new System.Windows.Forms.Padding(0);
+            this.button94.Name = "button94";
+            this.button94.Size = new System.Drawing.Size(50, 50);
+            this.button94.TabIndex = 108;
+            this.button94.Text = "\r\n    9\r\n0x69";
+            this.button94.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button94.UseVisualStyleBackColor = true;
+            // 
+            // button95
+            // 
+            this.button95.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button95.Location = new System.Drawing.Point(1000, 160);
+            this.button95.Margin = new System.Windows.Forms.Padding(0);
+            this.button95.Name = "button95";
+            this.button95.Size = new System.Drawing.Size(50, 50);
+            this.button95.TabIndex = 107;
+            this.button95.Text = "\r\n    7\r\n0x67";
+            this.button95.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button95.UseVisualStyleBackColor = true;
+            // 
+            // button97
+            // 
+            this.button97.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button97.Location = new System.Drawing.Point(1050, 260);
+            this.button97.Margin = new System.Windows.Forms.Padding(0);
+            this.button97.Name = "button97";
+            this.button97.Size = new System.Drawing.Size(50, 50);
+            this.button97.TabIndex = 117;
+            this.button97.Text = "\r\n    2\r\n0x62";
+            this.button97.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button97.UseVisualStyleBackColor = true;
+            // 
+            // button98
+            // 
+            this.button98.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button98.Location = new System.Drawing.Point(1100, 260);
+            this.button98.Margin = new System.Windows.Forms.Padding(0);
+            this.button98.Name = "button98";
+            this.button98.Size = new System.Drawing.Size(50, 50);
+            this.button98.TabIndex = 116;
+            this.button98.Text = "\r\n    3\r\n0x63";
+            this.button98.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button98.UseVisualStyleBackColor = true;
+            // 
+            // button99
+            // 
+            this.button99.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button99.Location = new System.Drawing.Point(1000, 260);
+            this.button99.Margin = new System.Windows.Forms.Padding(0);
+            this.button99.Name = "button99";
+            this.button99.Size = new System.Drawing.Size(50, 50);
+            this.button99.TabIndex = 115;
+            this.button99.Text = "\r\n    1\r\n0x61";
+            this.button99.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button99.UseVisualStyleBackColor = true;
+            // 
+            // button100
+            // 
+            this.button100.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button100.Location = new System.Drawing.Point(1150, 160);
+            this.button100.Margin = new System.Windows.Forms.Padding(0);
+            this.button100.Name = "button100";
+            this.button100.Size = new System.Drawing.Size(50, 100);
+            this.button100.TabIndex = 114;
+            this.button100.Text = "\r\n   +\r\n\r\n\r\n\r\n0x6B";
+            this.button100.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button100.UseVisualStyleBackColor = true;
+            // 
+            // button101
+            // 
+            this.button101.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button101.Location = new System.Drawing.Point(1050, 210);
+            this.button101.Margin = new System.Windows.Forms.Padding(0);
+            this.button101.Name = "button101";
+            this.button101.Size = new System.Drawing.Size(50, 50);
+            this.button101.TabIndex = 113;
+            this.button101.Text = "\r\n    5\r\n0x65";
+            this.button101.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button101.UseVisualStyleBackColor = true;
+            // 
+            // button102
+            // 
+            this.button102.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button102.Location = new System.Drawing.Point(1100, 210);
+            this.button102.Margin = new System.Windows.Forms.Padding(0);
+            this.button102.Name = "button102";
+            this.button102.Size = new System.Drawing.Size(50, 50);
+            this.button102.TabIndex = 112;
+            this.button102.Text = "\r\n    6\r\n0x66";
+            this.button102.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button102.UseVisualStyleBackColor = true;
+            // 
+            // button103
+            // 
+            this.button103.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button103.Location = new System.Drawing.Point(1000, 210);
+            this.button103.Margin = new System.Windows.Forms.Padding(0);
+            this.button103.Name = "button103";
+            this.button103.Size = new System.Drawing.Size(50, 50);
+            this.button103.TabIndex = 111;
+            this.button103.Text = "\r\n    4\r\n0x64";
+            this.button103.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button103.UseVisualStyleBackColor = true;
+            // 
+            // button104
+            // 
+            this.button104.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button104.Location = new System.Drawing.Point(1150, 260);
+            this.button104.Margin = new System.Windows.Forms.Padding(0);
+            this.button104.Name = "button104";
+            this.button104.Size = new System.Drawing.Size(50, 100);
+            this.button104.TabIndex = 122;
+            this.button104.Text = "\r\n Enter\r\n\r\n\r\n\r\n0x0D";
+            this.button104.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button104.UseVisualStyleBackColor = true;
+            // 
+            // button106
+            // 
+            this.button106.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button106.Location = new System.Drawing.Point(1100, 310);
+            this.button106.Margin = new System.Windows.Forms.Padding(0);
+            this.button106.Name = "button106";
+            this.button106.Size = new System.Drawing.Size(50, 50);
+            this.button106.TabIndex = 120;
+            this.button106.Text = "\r\n    .\r\n0x6E";
+            this.button106.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button106.UseVisualStyleBackColor = true;
+            // 
+            // button107
+            // 
+            this.button107.Font = new System.Drawing.Font("굴림", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button107.Location = new System.Drawing.Point(1000, 310);
+            this.button107.Margin = new System.Windows.Forms.Padding(0);
+            this.button107.Name = "button107";
+            this.button107.Size = new System.Drawing.Size(100, 50);
+            this.button107.TabIndex = 119;
+            this.button107.Text = "\r\n         0\r\n0x60";
+            this.button107.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button107.UseVisualStyleBackColor = true;
             // 
             // VirtualKeyCodeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1051, 388);
+            this.ClientSize = new System.Drawing.Size(1242, 388);
+            this.Controls.Add(this.button104);
+            this.Controls.Add(this.button106);
+            this.Controls.Add(this.button107);
+            this.Controls.Add(this.button97);
+            this.Controls.Add(this.button98);
+            this.Controls.Add(this.button99);
+            this.Controls.Add(this.button100);
+            this.Controls.Add(this.button101);
+            this.Controls.Add(this.button102);
+            this.Controls.Add(this.button103);
+            this.Controls.Add(this.button93);
+            this.Controls.Add(this.button94);
+            this.Controls.Add(this.button95);
+            this.Controls.Add(this.button91);
+            this.Controls.Add(this.button88);
+            this.Controls.Add(this.button89);
+            this.Controls.Add(this.button90);
+            this.Controls.Add(this.button87);
+            this.Controls.Add(this.button86);
+            this.Controls.Add(this.button85);
+            this.Controls.Add(this.button84);
+            this.Controls.Add(this.button78);
+            this.Controls.Add(this.button81);
+            this.Controls.Add(this.button82);
+            this.Controls.Add(this.button83);
+            this.Controls.Add(this.button79);
+            this.Controls.Add(this.button80);
+            this.Controls.Add(this.button75);
+            this.Controls.Add(this.button76);
+            this.Controls.Add(this.button77);
+            this.Controls.Add(this.button74);
+            this.Controls.Add(this.button72);
+            this.Controls.Add(this.button73);
+            this.Controls.Add(this.button71);
+            this.Controls.Add(this.button70);
+            this.Controls.Add(this.button69);
+            this.Controls.Add(this.button68);
+            this.Controls.Add(this.button60);
             this.Controls.Add(this.button64);
             this.Controls.Add(this.button65);
             this.Controls.Add(this.button66);
             this.Controls.Add(this.button67);
-            this.Controls.Add(this.button60);
             this.Controls.Add(this.button61);
             this.Controls.Add(this.button62);
             this.Controls.Add(this.button63);
@@ -1042,7 +1560,6 @@
         private System.Windows.Forms.Button button57;
         private System.Windows.Forms.Button button58;
         private System.Windows.Forms.Button button59;
-        private System.Windows.Forms.Button button60;
         private System.Windows.Forms.Button button61;
         private System.Windows.Forms.Button button62;
         private System.Windows.Forms.Button button63;
@@ -1050,5 +1567,43 @@
         private System.Windows.Forms.Button button65;
         private System.Windows.Forms.Button button66;
         private System.Windows.Forms.Button button67;
+        private System.Windows.Forms.Button button60;
+        private System.Windows.Forms.Button button68;
+        private System.Windows.Forms.Button button69;
+        private System.Windows.Forms.Button button70;
+        private System.Windows.Forms.Button button71;
+        private System.Windows.Forms.Button button72;
+        private System.Windows.Forms.Button button73;
+        private System.Windows.Forms.Button button74;
+        private System.Windows.Forms.Button button75;
+        private System.Windows.Forms.Button button76;
+        private System.Windows.Forms.Button button77;
+        private System.Windows.Forms.Button button79;
+        private System.Windows.Forms.Button button80;
+        private System.Windows.Forms.Button button81;
+        private System.Windows.Forms.Button button82;
+        private System.Windows.Forms.Button button83;
+        private System.Windows.Forms.Button button78;
+        private System.Windows.Forms.Button button84;
+        private System.Windows.Forms.Button button85;
+        private System.Windows.Forms.Button button86;
+        private System.Windows.Forms.Button button87;
+        private System.Windows.Forms.Button button88;
+        private System.Windows.Forms.Button button89;
+        private System.Windows.Forms.Button button90;
+        private System.Windows.Forms.Button button91;
+        private System.Windows.Forms.Button button93;
+        private System.Windows.Forms.Button button94;
+        private System.Windows.Forms.Button button95;
+        private System.Windows.Forms.Button button97;
+        private System.Windows.Forms.Button button98;
+        private System.Windows.Forms.Button button99;
+        private System.Windows.Forms.Button button100;
+        private System.Windows.Forms.Button button101;
+        private System.Windows.Forms.Button button102;
+        private System.Windows.Forms.Button button103;
+        private System.Windows.Forms.Button button104;
+        private System.Windows.Forms.Button button106;
+        private System.Windows.Forms.Button button107;
     }
 }
