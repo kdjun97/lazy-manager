@@ -33,11 +33,13 @@
 `Ver 0.1.0`  
   - Keyboard 제어 가능
   - Keyboard hooking 가능
-  - [Lazy Manager](https://kdjun97.github.io/automation-solution/lazy-manager/)
+  - [Lazy Manager](https://kdjun97.github.io/automation-solution/lazy-manager/)  
+
 `Ver 0.2.0`  
   - 실시간 클라이언트 캡처 가능
   - 이미지 서치 가능
-  - [Lazy Manager2](https://kdjun97.github.io/automation-solution/lazy-manager2/)
+  - [Lazy Manager2](https://kdjun97.github.io/automation-solution/lazy-manager2/)  
+  
 `Ver 0.3.0`  
   - 기존 기능들 삭제
   - 스크립트 실행 방식으로 변경 
