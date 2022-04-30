@@ -39,7 +39,7 @@
   - 실시간 클라이언트 캡처 가능
   - 이미지 서치 가능
   - [Lazy Manager2](https://kdjun97.github.io/automation-solution/lazy-manager2/)  
-  
+
 `Ver 0.3.0`  
   - 기존 기능들 삭제
   - 스크립트 실행 방식으로 변경 
@@ -52,7 +52,7 @@
 # TODO
   * Info/Program Info -> Version -> History 나오게
   * Form에 추가될 text 혹은 기능?
-  * mouse position (mouse 전역 훅을 통한 좌표값 얻기 기능)
+  * mouse position (mouse 전역 훅을 통한 좌표값 얻기 기능) (Ver0.3.1)
   * r(repeat)기능 추가(Ver0.4.0)  
   * 조건 기능 추가(Ver0.5.0)
   * 보드 기능 추가(Ver0.6.0)
