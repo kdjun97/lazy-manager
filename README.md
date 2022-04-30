@@ -1,11 +1,13 @@
 # Lazy Manager
 
 **Description** : Are u lazy? 🦥 Or, are you getting stressed 😠 from repetitive tasks? 📚 Then this program will help you!    
+**Version** : 0.3.0  
 **Language** : c#, c++  
 **Used Tool** : Arduino IDE  
 **Used Board** : Arduino Leonardo Board  
-**Tech Blog** : [Lazy Manager3](https://kdjun97.github.io/blog/Lazy-Manager3/)  
+**Tech Blog** : [Lazy Manager3](https://kdjun97.github.io/automation-solution/lazy-manager3/)  
 
+> 현재 0.3.0 버전에서는 보드를 사용하지 않고, 키맵핑, 키보드 제어, 마우스 제어만 가능
 
 #### 기대효과  
 
@@ -27,12 +29,29 @@
 
 
 **History**  
-  - [Lazy Manager](https://kdjun97.github.io/blog/Lazy_Manager/)
-  - [Lazy Manager2](https://kdjun97.github.io/blog/Lazy_Manager2/)
+
+`Ver 0.1.0`  
+  - Keyboard 제어 가능
+  - Keyboard hooking 가능
+  - [Lazy Manager](https://kdjun97.github.io/automation-solution/lazy-manager/)
+`Ver 0.2.0`  
+  - 실시간 클라이언트 캡처 가능
+  - 이미지 서치 가능
+  - [Lazy Manager2](https://kdjun97.github.io/automation-solution/lazy-manager2/)
+`Ver 0.3.0`  
+  - 기존 기능들 삭제
+  - 스크립트 실행 방식으로 변경 
+  - 키 맵핑 가능
+  - 키보드 제어 가능
+  - 마우스 제어 가능
+  - WinForm UI 추가
+  - [Lazy Manager3](https://kdjun97.github.io/automation-solution/lazy-manager3/)
 
 # TODO
   * Info/Program Info -> Version -> History 나오게
-  * Virtual KeyCode 제작
-  * Func에 (Image Search) ~ing 추가
   * Form에 추가될 text 혹은 기능?
   * mouse position (mouse 전역 훅을 통한 좌표값 얻기 기능)
+  * r(repeat)기능 추가(Ver0.4.0)  
+  * 조건 기능 추가(Ver0.5.0)
+  * 보드 기능 추가(Ver0.6.0)
+  * 이미지 인식 기능 추가(Ver0.7.0)
