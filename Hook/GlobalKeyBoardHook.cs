@@ -49,14 +49,9 @@ namespace lazy_manager.hook
         public IntPtr hhook = IntPtr.Zero;
 
         // constructor
-        public GlobalKeyBoardHook(List<Keys> hookedKeys, List<HotkeyModel> hotkeyModel)
+        public GlobalKeyBoardHook()
         {
-            this.hotkeyModel = hotkeyModel;
-            HookedKeys = hookedKeys;
-            KeyDown += new KeyEventHandler(KeyDownEvent);
-            KeyUp += new KeyEventHandler(KeyUpEvent);
 
-            hook();
         }
 
         public void KeyDownEvent(object sender, KeyEventArgs e)
@@ -76,11 +71,16 @@ namespace lazy_manager.hook
         }
         
         // global hook install
-        public void hook()
+        public void hook(List<Keys> hookedKeys, List<HotkeyModel> hotkeyModel)
         {
             if (callbackDelegate != null)
                 callbackDelegate = null; // only one hook
-            
+
+            this.hotkeyModel = hotkeyModel;
+            HookedKeys = hookedKeys;
+            KeyDown += new KeyEventHandler(KeyDownEvent);
+            KeyUp += new KeyEventHandler(KeyUpEvent);
+
             IntPtr hInstance = LoadLibrary("User32");
             callbackDelegate = new keyboardHookProc(hookProc);
             hhook = SetWindowsHookEx((int)HookEnum.WH_KEYBOARD_LL, callbackDelegate, hInstance, 0);
