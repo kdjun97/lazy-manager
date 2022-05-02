@@ -40,22 +40,24 @@
             this.unhookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkDisplayResolutionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.programInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.virtualKeyCodeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.programInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.version01ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.제작자김동준ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.emailToToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kdjun97gmailcomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.editBox = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.checkDisplayResolutionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.emailToToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kdjun97gmailcomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.version01ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.제작자김동준ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.historyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -132,15 +134,16 @@
             // readScriptToolStripMenuItem
             // 
             this.readScriptToolStripMenuItem.Name = "readScriptToolStripMenuItem";
-            this.readScriptToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
+            this.readScriptToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.readScriptToolStripMenuItem.Text = "Read Script";
             this.readScriptToolStripMenuItem.Click += new System.EventHandler(this.readScriptToolStripMenuItem_Click);
             // 
             // unhookToolStripMenuItem
             // 
             this.unhookToolStripMenuItem.Name = "unhookToolStripMenuItem";
-            this.unhookToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
+            this.unhookToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.unhookToolStripMenuItem.Text = "unhook";
+            this.unhookToolStripMenuItem.Click += new System.EventHandler(this.unhookToolStripMenuItem_Click);
             // 
             // settingToolStripMenuItem
             // 
@@ -154,34 +157,72 @@
             // ingToolStripMenuItem
             // 
             this.ingToolStripMenuItem.Name = "ingToolStripMenuItem";
-            this.ingToolStripMenuItem.Size = new System.Drawing.Size(117, 26);
+            this.ingToolStripMenuItem.Size = new System.Drawing.Size(257, 26);
             this.ingToolStripMenuItem.Text = "~ing";
+            // 
+            // checkDisplayResolutionToolStripMenuItem
+            // 
+            this.checkDisplayResolutionToolStripMenuItem.Name = "checkDisplayResolutionToolStripMenuItem";
+            this.checkDisplayResolutionToolStripMenuItem.Size = new System.Drawing.Size(257, 26);
+            this.checkDisplayResolutionToolStripMenuItem.Text = "Check Display Resolution";
+            this.checkDisplayResolutionToolStripMenuItem.Click += new System.EventHandler(this.checkDisplayResolutionToolStripMenuItem_Click);
             // 
             // infoToolStripMenuItem
             // 
             this.infoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.virtualKeyCodeToolStripMenuItem,
             this.programInfoToolStripMenuItem,
-            this.emailToToolStripMenuItem});
+            this.emailToToolStripMenuItem,
+            this.usageToolStripMenuItem});
             this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
             this.infoToolStripMenuItem.Size = new System.Drawing.Size(48, 24);
             this.infoToolStripMenuItem.Text = "Info";
+            // 
+            // virtualKeyCodeToolStripMenuItem
+            // 
+            this.virtualKeyCodeToolStripMenuItem.Name = "virtualKeyCodeToolStripMenuItem";
+            this.virtualKeyCodeToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.virtualKeyCodeToolStripMenuItem.Text = "Virtual KeyCode";
+            this.virtualKeyCodeToolStripMenuItem.Click += new System.EventHandler(this.virtualKeyCodeToolStripMenuItem_Click);
             // 
             // programInfoToolStripMenuItem
             // 
             this.programInfoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.version01ToolStripMenuItem,
-            this.제작자김동준ToolStripMenuItem});
+            this.제작자김동준ToolStripMenuItem,
+            this.historyToolStripMenuItem});
             this.programInfoToolStripMenuItem.Name = "programInfoToolStripMenuItem";
             this.programInfoToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.programInfoToolStripMenuItem.Text = "Program Info";
             // 
-            // virtualKeyCodeToolStripMenuItem
+            // version01ToolStripMenuItem
             // 
-            this.virtualKeyCodeToolStripMenuItem.Name = "virtualKeyCodeToolStripMenuItem";
-            this.virtualKeyCodeToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
-            this.virtualKeyCodeToolStripMenuItem.Text = "Virtual KeyCode";
-            this.virtualKeyCodeToolStripMenuItem.Click += new System.EventHandler(this.virtualKeyCodeToolStripMenuItem_Click);
+            this.version01ToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
+            this.version01ToolStripMenuItem.Name = "version01ToolStripMenuItem";
+            this.version01ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.version01ToolStripMenuItem.Text = "Version 0.3.1";
+            // 
+            // 제작자김동준ToolStripMenuItem
+            // 
+            this.제작자김동준ToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.제작자김동준ToolStripMenuItem.Name = "제작자김동준ToolStripMenuItem";
+            this.제작자김동준ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.제작자김동준ToolStripMenuItem.Text = "제작자@김동준";
+            // 
+            // emailToToolStripMenuItem
+            // 
+            this.emailToToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.kdjun97gmailcomToolStripMenuItem});
+            this.emailToToolStripMenuItem.Name = "emailToToolStripMenuItem";
+            this.emailToToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.emailToToolStripMenuItem.Text = "Email to";
+            // 
+            // kdjun97gmailcomToolStripMenuItem
+            // 
+            this.kdjun97gmailcomToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.kdjun97gmailcomToolStripMenuItem.Name = "kdjun97gmailcomToolStripMenuItem";
+            this.kdjun97gmailcomToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.kdjun97gmailcomToolStripMenuItem.Text = "kdjun97@gmail.com";
             // 
             // statusStrip1
             // 
@@ -209,6 +250,19 @@
             this.toolStripStatusLabel2.Size = new System.Drawing.Size(46, 20);
             this.toolStripStatusLabel2.Text = "None";
             // 
+            // toolStripStatusLabel4
+            // 
+            this.toolStripStatusLabel4.Name = "toolStripStatusLabel4";
+            this.toolStripStatusLabel4.Size = new System.Drawing.Size(182, 20);
+            this.toolStripStatusLabel4.Spring = true;
+            this.toolStripStatusLabel4.Text = "Version 0.3.1";
+            // 
+            // toolStripStatusLabel3
+            // 
+            this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(112, 20);
+            this.toolStripStatusLabel3.Text = "제작자 : 김동준";
+            // 
             // editBox
             // 
             this.editBox.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -224,53 +278,19 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // toolStripStatusLabel3
+            // historyToolStripMenuItem
             // 
-            this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-            this.toolStripStatusLabel3.Size = new System.Drawing.Size(112, 20);
-            this.toolStripStatusLabel3.Text = "제작자 : 김동준";
+            this.historyToolStripMenuItem.Name = "historyToolStripMenuItem";
+            this.historyToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.historyToolStripMenuItem.Text = "History";
+            this.historyToolStripMenuItem.Click += new System.EventHandler(this.historyToolStripMenuItem_Click);
             // 
-            // toolStripStatusLabel4
+            // usageToolStripMenuItem
             // 
-            this.toolStripStatusLabel4.Name = "toolStripStatusLabel4";
-            this.toolStripStatusLabel4.Size = new System.Drawing.Size(143, 20);
-            this.toolStripStatusLabel4.Spring = true;
-            this.toolStripStatusLabel4.Text = "Version 0.1";
-            // 
-            // checkDisplayResolutionToolStripMenuItem
-            // 
-            this.checkDisplayResolutionToolStripMenuItem.Name = "checkDisplayResolutionToolStripMenuItem";
-            this.checkDisplayResolutionToolStripMenuItem.Size = new System.Drawing.Size(257, 26);
-            this.checkDisplayResolutionToolStripMenuItem.Text = "Check Display Resolution";
-            // 
-            // emailToToolStripMenuItem
-            // 
-            this.emailToToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.kdjun97gmailcomToolStripMenuItem});
-            this.emailToToolStripMenuItem.Name = "emailToToolStripMenuItem";
-            this.emailToToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.emailToToolStripMenuItem.Text = "Email to";
-            // 
-            // kdjun97gmailcomToolStripMenuItem
-            // 
-            this.kdjun97gmailcomToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.kdjun97gmailcomToolStripMenuItem.Name = "kdjun97gmailcomToolStripMenuItem";
-            this.kdjun97gmailcomToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.kdjun97gmailcomToolStripMenuItem.Text = "kdjun97@gmail.com";
-            // 
-            // version01ToolStripMenuItem
-            // 
-            this.version01ToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
-            this.version01ToolStripMenuItem.Name = "version01ToolStripMenuItem";
-            this.version01ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.version01ToolStripMenuItem.Text = "Version 0.1";
-            // 
-            // 제작자김동준ToolStripMenuItem
-            // 
-            this.제작자김동준ToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.제작자김동준ToolStripMenuItem.Name = "제작자김동준ToolStripMenuItem";
-            this.제작자김동준ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.제작자김동준ToolStripMenuItem.Text = "제작자@김동준";
+            this.usageToolStripMenuItem.Name = "usageToolStripMenuItem";
+            this.usageToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.usageToolStripMenuItem.Text = "Usage";
+            this.usageToolStripMenuItem.Click += new System.EventHandler(this.usageToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -323,6 +343,8 @@
         private System.Windows.Forms.ToolStripMenuItem 제작자김동준ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem emailToToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kdjun97gmailcomToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem historyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usageToolStripMenuItem;
     }
 }
 

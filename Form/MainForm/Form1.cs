@@ -14,6 +14,9 @@ namespace lazy_manager
 {
     public partial class Form1 : Form
     {
+        GlobalKeyBoardHook globalKeyBoardHook = new GlobalKeyBoardHook();
+        DisplayResolutionModel displayResolutionModel = DisplayResolutionModel.Instance(); // singleton pattern
+
         public Form1()
         {
             InitializeComponent();
@@ -108,17 +111,20 @@ namespace lazy_manager
         private void virtualKeyCodeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             VirtualKeyCodeForm virtualKeyCodeForm = new VirtualKeyCodeForm();
-            virtualKeyCodeForm.ShowDialog();
+            virtualKeyCodeForm.Show();
             // 창 고정 필요함.
         }
 
         // Read Script
         private void readScriptToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DisplayResolution.SetDisplayResolution(); // setting display resolution
+            if (!displayResolutionModel.isDisplayResolution)
+                DisplayResolution.SetDisplayResolution(); // setting display resolution
+            
             ReadScript readScript = new ReadScript();
             HotkeySetting hotkeySetting = new HotkeySetting();
             HotkeyModelListSetting hotkeyModelListSetting = new HotkeyModelListSetting();
+
             List<Tuple<char, string>> list = readScript.ReadScriptLine(editBox.Text);
             Debug.Print("----------readScript 끝-----------");
 
@@ -138,13 +144,45 @@ namespace lazy_manager
 
             List<Keys> hookedKeys = new List<Keys>();
             hookedKeys = hotkeySetting.SetHotkey(hotkeyModel);
-            
-            GlobalKeyBoardHook globalKeyBoardHook = new GlobalKeyBoardHook(hookedKeys, hotkeyModel);
+
+            globalKeyBoardHook.hook(hookedKeys, hotkeyModel);
+
             if (globalKeyBoardHook.hhook != IntPtr.Zero)
             {
                 toolStripStatusLabel2.Text = "Hooking";
                 toolStripStatusLabel2.ForeColor = Color.Red;
             }
+
+            Debug.Print(displayResolutionModel.displayScale.ToString());
+        }
+
+        // unhook
+        private void unhookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            globalKeyBoardHook.unhook();
+            toolStripStatusLabel2.Text = "None";
+            toolStripStatusLabel2.ForeColor = Color.Black;
+        }
+
+        // Check Display Resolution
+        private void checkDisplayResolutionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!displayResolutionModel.isDisplayResolution)
+                DisplayResolution.SetDisplayResolution(); // setting display resolution
+            MessageBox.Show("해상도 배율 :" + displayResolutionModel.displayScale.ToString());
+        }
+
+        // History
+        private void historyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HistoryForm historyForm = new HistoryForm();
+            historyForm.Show();
+        }
+
+        // Usage
+        private void usageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("사용법 구현중");
         }
     }
 }
