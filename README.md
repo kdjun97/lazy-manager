@@ -1,7 +1,7 @@
 # Lazy Manager
 
 **Description** : Are u lazy? 🦥 Or, are you getting stressed 😠 from repetitive tasks? 📚 Then this program will help you!    
-**Version** : 0.3.0  
+**Version** : 0.3.1  
 **Language** : c#, c++  
 **Used Tool** : Arduino IDE  
 **Used Board** : Arduino Leonardo Board  
@@ -49,10 +49,17 @@
   - WinForm UI 추가
   - [Lazy Manager3](https://kdjun97.github.io/automation-solution/lazy-manager3/)
 
+`Ver 0.3.1`
+  - 해상도 관련 값들 singleton pattern 적용
+  - MenuStrip unhook 기능 추가
+  - MenuStrip 해상도 배율 확인 기능 추가
+  - Virtual Key Code Form Load 방식 변경 (ShowDialog->Show)
+  - StatusStrip hook, unhook에 따른 text 변경
+
 # TODO
   * Info/Program Info -> Version -> History 나오게
   * Form에 추가될 text 혹은 기능?
-  * mouse position (mouse 전역 훅을 통한 좌표값 얻기 기능) (Ver0.3.1)
+  * mouse position (mouse 전역 훅을 통한 좌표값 얻기 기능) (Ver0.3.5)
   * r(repeat)기능 추가(Ver0.4.0)  
   * 조건 기능 추가(Ver0.5.0)
   * 보드 기능 추가(Ver0.6.0)
