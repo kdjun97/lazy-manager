@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using lazy_manager.Enums;
+using lazy_manager.Model;
 
 namespace lazy_manager.Display
 {
@@ -12,9 +13,6 @@ namespace lazy_manager.Display
     /// </summary>
     public class DisplayResolution
     {
-        static Size displaySize;
-        public Size GetDisplaySize() => displaySize;
-
         /// <summary>
         /// Device context를 구하기 위한 함수 (GetDeviceCaps)
         /// </summary>
@@ -54,11 +52,14 @@ namespace lazy_manager.Display
         /// <returns></returns>
         public static void SetDisplayResolution()
         {
-            var scalingFactor = GetWindowsScreenScalingFactor(false);
-            Debug.Print("해상도 배율 :" + scalingFactor.ToString());
-            var screenWidth = Screen.PrimaryScreen.Bounds.Width * scalingFactor;
-            var screenHeight = Screen.PrimaryScreen.Bounds.Height * scalingFactor;
-            displaySize =  new Size((int)screenWidth, (int)screenHeight);
+            DisplayResolutionModel displayResolutionModel = DisplayResolutionModel.Instance();
+
+            displayResolutionModel.displayScale = GetWindowsScreenScalingFactor(false);
+            Debug.Print("해상도 배율 :" + displayResolutionModel.displayScale.ToString());
+            var screenWidth = Screen.PrimaryScreen.Bounds.Width * displayResolutionModel.displayScale;
+            var screenHeight = Screen.PrimaryScreen.Bounds.Height * displayResolutionModel.displayScale;
+            displayResolutionModel.displaySize = new Size((int)screenWidth, (int)screenHeight);
+            displayResolutionModel.isDisplayResolution = true;
         }
     }
 }
