@@ -57,8 +57,6 @@
   - StatusStrip hook, unhook에 따른 text 변경
 
 # TODO
-  * Info/Program Info -> Version -> History 나오게
-  * Form에 추가될 text 혹은 기능?
   * mouse position (mouse 전역 훅을 통한 좌표값 얻기 기능) (Ver0.3.5)
   * r(repeat)기능 추가(Ver0.4.0)  
   * 조건 기능 추가(Ver0.5.0)
