@@ -19,9 +19,11 @@ namespace lazy_manager.Command
         /// </summary>
         /// <param name="hotkeyModel">셋팅된 핫키 모델</param>
         public async void HotkeyCommandHandle(HotkeyModel hotkeyModel)
-        {
+        {            
             try
             {
+                Debug.Print(hotkeyModel.GetHotkey().ToString() + "시작지점");
+                // TODO: 여기를 while로 감싸서 r 특수명령 구현하기
                 foreach (Tuple<char, string> command in hotkeyModel.GetCommand())
                 {
                     switch (command.Item1) {
@@ -40,8 +42,9 @@ namespace lazy_manager.Command
                             throw new Exception("예외: 등록되지 않은 명령어");
                     }
                 }
-
-            } catch (Exception eMsg)
+                Debug.Print(hotkeyModel.GetHotkey().ToString() + "끝지점");
+            }
+            catch (Exception eMsg)
             {
                 Debug.Print(eMsg.Message);
             }
