@@ -14,5 +14,11 @@ namespace lazy_manager
         {
 
         }
+
+        // Virtual Key Code Form Close
+        private void VirtualKeyCodeForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Dispose();
+        }
     }
 }
