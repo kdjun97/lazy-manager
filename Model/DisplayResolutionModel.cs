@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using System.Drawing;
+﻿using System.Drawing;
 
 namespace lazy_manager.Model
 {
@@ -8,7 +7,9 @@ namespace lazy_manager.Model
         public Size displaySize { get; set; } // display (width, height)
         public bool isDisplayResolution { get; set; } = false; // true -> we know display info
         public double displayScale { get; set; } // display scale (배율)
-        
+
+        private DisplayResolutionModel() { }
+
         private static DisplayResolutionModel singletonDisplayResolutionModel;
         /// <summary>
         /// singleton pattern
