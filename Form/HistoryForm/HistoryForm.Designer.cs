@@ -53,6 +53,7 @@
             this.Controls.Add(this.textBox1);
             this.Name = "HistoryForm";
             this.Text = "HistoryForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.HistoryForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
