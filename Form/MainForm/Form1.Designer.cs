@@ -46,8 +46,10 @@
             this.programInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.version01ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.제작자김동준ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.historyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.emailToToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kdjun97gmailcomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -56,8 +58,6 @@
             this.editBox = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.historyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -134,14 +134,14 @@
             // readScriptToolStripMenuItem
             // 
             this.readScriptToolStripMenuItem.Name = "readScriptToolStripMenuItem";
-            this.readScriptToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.readScriptToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.readScriptToolStripMenuItem.Text = "Read Script";
             this.readScriptToolStripMenuItem.Click += new System.EventHandler(this.readScriptToolStripMenuItem_Click);
             // 
             // unhookToolStripMenuItem
             // 
             this.unhookToolStripMenuItem.Name = "unhookToolStripMenuItem";
-            this.unhookToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.unhookToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.unhookToolStripMenuItem.Text = "unhook";
             this.unhookToolStripMenuItem.Click += new System.EventHandler(this.unhookToolStripMenuItem_Click);
             // 
@@ -181,7 +181,7 @@
             // virtualKeyCodeToolStripMenuItem
             // 
             this.virtualKeyCodeToolStripMenuItem.Name = "virtualKeyCodeToolStripMenuItem";
-            this.virtualKeyCodeToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.virtualKeyCodeToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
             this.virtualKeyCodeToolStripMenuItem.Text = "Virtual KeyCode";
             this.virtualKeyCodeToolStripMenuItem.Click += new System.EventHandler(this.virtualKeyCodeToolStripMenuItem_Click);
             // 
@@ -192,29 +192,36 @@
             this.제작자김동준ToolStripMenuItem,
             this.historyToolStripMenuItem});
             this.programInfoToolStripMenuItem.Name = "programInfoToolStripMenuItem";
-            this.programInfoToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.programInfoToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
             this.programInfoToolStripMenuItem.Text = "Program Info";
             // 
             // version01ToolStripMenuItem
             // 
             this.version01ToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
             this.version01ToolStripMenuItem.Name = "version01ToolStripMenuItem";
-            this.version01ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.version01ToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
             this.version01ToolStripMenuItem.Text = "Version 0.3.1";
             // 
             // 제작자김동준ToolStripMenuItem
             // 
             this.제작자김동준ToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.제작자김동준ToolStripMenuItem.Name = "제작자김동준ToolStripMenuItem";
-            this.제작자김동준ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.제작자김동준ToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
             this.제작자김동준ToolStripMenuItem.Text = "제작자@김동준";
+            // 
+            // historyToolStripMenuItem
+            // 
+            this.historyToolStripMenuItem.Name = "historyToolStripMenuItem";
+            this.historyToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
+            this.historyToolStripMenuItem.Text = "History";
+            this.historyToolStripMenuItem.Click += new System.EventHandler(this.historyToolStripMenuItem_Click);
             // 
             // emailToToolStripMenuItem
             // 
             this.emailToToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.kdjun97gmailcomToolStripMenuItem});
             this.emailToToolStripMenuItem.Name = "emailToToolStripMenuItem";
-            this.emailToToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.emailToToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
             this.emailToToolStripMenuItem.Text = "Email to";
             // 
             // kdjun97gmailcomToolStripMenuItem
@@ -223,6 +230,13 @@
             this.kdjun97gmailcomToolStripMenuItem.Name = "kdjun97gmailcomToolStripMenuItem";
             this.kdjun97gmailcomToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.kdjun97gmailcomToolStripMenuItem.Text = "kdjun97@gmail.com";
+            // 
+            // usageToolStripMenuItem
+            // 
+            this.usageToolStripMenuItem.Name = "usageToolStripMenuItem";
+            this.usageToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
+            this.usageToolStripMenuItem.Text = "Usage";
+            this.usageToolStripMenuItem.Click += new System.EventHandler(this.usageToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
@@ -278,20 +292,6 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // historyToolStripMenuItem
-            // 
-            this.historyToolStripMenuItem.Name = "historyToolStripMenuItem";
-            this.historyToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.historyToolStripMenuItem.Text = "History";
-            this.historyToolStripMenuItem.Click += new System.EventHandler(this.historyToolStripMenuItem_Click);
-            // 
-            // usageToolStripMenuItem
-            // 
-            this.usageToolStripMenuItem.Name = "usageToolStripMenuItem";
-            this.usageToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.usageToolStripMenuItem.Text = "Usage";
-            this.usageToolStripMenuItem.Click += new System.EventHandler(this.usageToolStripMenuItem_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -303,6 +303,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Lazy Manager";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

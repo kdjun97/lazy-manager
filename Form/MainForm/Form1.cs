@@ -4,11 +4,13 @@ using System.Linq;
 using System.Diagnostics;
 using System.Windows.Forms;
 using lazy_manager.hook;
-using System.IO;
 using lazy_manager.Model;
 using lazy_manager.Script;
 using lazy_manager.Display;
 using System.Drawing;
+using lazy_manager.FormMenu.FileMenu;
+using lazy_manager.FormMenu.InfoMenu;
+using lazy_manager.FormMenu.SettingMenu;
 
 namespace lazy_manager
 {
@@ -27,92 +29,47 @@ namespace lazy_manager
             
         }
 
+        // Form Close
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Dispose();
+            Close();
+        }
+
         // New File
         private void newFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (editBox.Text.Length != 0)
-                SaveFile(true);
-            editBox.Text = "";
+            using (NewFileHandle newFileHandle = new NewFileHandle())
+                newFileHandle.NewFile(true, saveFileDialog1, editBox);
         }
 
         // Load Event
         private void loadFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            LoadFile();
-        }
-
-        // Load File
-        private void LoadFile()
-        {
-            try
-            {
-                openFileDialog1.FileName = "";
-                openFileDialog1.Filter = ".ini|*.ini|.txt|*.txt|All|*.*";
-                openFileDialog1.ShowDialog();
-                string fileData = File.ReadAllText(openFileDialog1.FileName);
-                editBox.Text = fileData;
-            } catch (FileNotFoundException eMsg) // 파일 선택 없이 나갈때
-            {
-                Debug.Print(eMsg.Message);
-            } catch (ArgumentException eMsg) // 빈 경로일 때,
-            {
-                Debug.Print(eMsg.Message);
-            } catch (Exception eMsg)
-            {
-                Debug.Print(eMsg.Message);
-            }
+            using (LoadFileHandle loadFileHandle = new LoadFileHandle())
+                loadFileHandle.LoadFile(openFileDialog1, editBox);
         }
 
         // Save Event
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SaveFile(true);
-            /* 무조건 save as 기능만 넣음
-            else
-                SaveFile(false);
-            */
-        }
-
-        // Save As File
-        private void SaveFile(bool isSavingAs)
-        {
-            if (isSavingAs == true) // Save As
-            {
-                try
-                {
-                    saveFileDialog1.Filter = ".ini|*.ini|.txt|*.txt|All|*.*";
-                    saveFileDialog1.ShowDialog();
-                    File.WriteAllText(saveFileDialog1.FileName, editBox.Text);
-                } catch (FileNotFoundException eMsg) // 파일 선택 없이 나갈때
-                {
-                    Debug.Print(eMsg.Message);
-                } catch (ArgumentException eMsg) // 빈 경로일 때,
-                {
-                    Debug.Print(eMsg.Message);
-                } catch (Exception eMsg)
-                {
-                    Debug.Print(eMsg.Message);
-                }
-                
-            }
-            else // Save (현재 파일명 동일)
-            {
-                File.WriteAllText(saveFileDialog1.FileName, editBox.Text);
-            }
+            // 무조건 Save As 기능만 넣음
+            using (SaveAsFileHandle saveAsFileHandle = new SaveAsFileHandle())
+                saveAsFileHandle.SaveFile(true, saveFileDialog1, editBox);
         }
 
         // Exit
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Dispose();
+            Close();
         }
 
         // Virtual Key Code
         private void virtualKeyCodeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            VirtualKeyCodeForm virtualKeyCodeForm = new VirtualKeyCodeForm();
-            virtualKeyCodeForm.Show();
-            // 창 고정 필요함.
+            using (VirtualKeyCodeShowHandle virtualKeyCodeShowHandle = new VirtualKeyCodeShowHandle())
+                virtualKeyCodeShowHandle.VirtualKeyCodeShow();
         }
 
         // Read Script
@@ -124,7 +81,7 @@ namespace lazy_manager
             ReadScript readScript = new ReadScript();
             HotkeySetting hotkeySetting = new HotkeySetting();
             HotkeyModelListSetting hotkeyModelListSetting = new HotkeyModelListSetting();
-
+            
             List<Tuple<char, string>> list = readScript.ReadScriptLine(editBox.Text);
             Debug.Print("----------readScript 끝-----------");
 
@@ -154,6 +111,7 @@ namespace lazy_manager
             }
 
             Debug.Print(displayResolutionModel.displayScale.ToString());
+            
         }
 
         // unhook
@@ -167,22 +125,22 @@ namespace lazy_manager
         // Check Display Resolution
         private void checkDisplayResolutionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (!displayResolutionModel.isDisplayResolution)
-                DisplayResolution.SetDisplayResolution(); // setting display resolution
-            MessageBox.Show("해상도 배율 :" + displayResolutionModel.displayScale.ToString());
+            using (CheckDisplayResolutionHandle checkDisplayResolutionHandle = new CheckDisplayResolutionHandle())
+                checkDisplayResolutionHandle.CheckDisplayResolutionShow();
         }
 
         // History
         private void historyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            HistoryForm historyForm = new HistoryForm();
-            historyForm.Show();
+            using (HistoryShowHandle historyShowHandle = new HistoryShowHandle())
+                historyShowHandle.HistoryShow();
         }
 
         // Usage
         private void usageToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("사용법 구현중");
+            using (UsageHandle usageHandle = new UsageHandle())
+                usageHandle.UsageShow();
         }
     }
 }
