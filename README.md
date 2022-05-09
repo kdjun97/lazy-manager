@@ -56,6 +56,9 @@
   - Virtual Key Code Form Load 방식 변경 (ShowDialog->Show)
   - StatusStrip hook, unhook에 따른 text 변경
 
+`Ver 0.3.2`
+  - 해상도 MessageBox 추가
+
 # TODO
   * mouse position (mouse 전역 훅을 통한 좌표값 얻기 기능) (Ver0.3.5)
   * r(repeat)기능 추가(Ver0.4.0)  
