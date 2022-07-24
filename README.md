@@ -1,13 +1,13 @@
 # Lazy Manager
 
 **Description** : Are u lazy? 🦥 Or, are you getting stressed 😠 from repetitive tasks? 📚 Then this program will help you!    
-**Version** : 0.3.1  
+**Version** : 0.3.2  
 **Language** : c#, c++  
 **Used Tool** : Arduino IDE  
 **Used Board** : Arduino Leonardo Board  
 **Tech Blog** : [Lazy Manager3](https://kdjun97.github.io/automation-solution/lazy-manager3/)  
 
-> 현재 0.3.0 버전에서는 보드를 사용하지 않고, 키맵핑, 키보드 제어, 마우스 제어만 가능
+> 현재 0.3.2 버전에서는 보드를 사용하지 않고, 키맵핑, 키보드 제어, 마우스 제어만 가능
 
 #### 기대효과  
 
@@ -60,8 +60,8 @@
   - 해상도 MessageBox 추가
 
 # TODO
-  * mouse position (mouse 전역 훅을 통한 좌표값 얻기 기능) (Ver0.3.5)
-  * r(repeat)기능 추가(Ver0.4.0)  
-  * 조건 기능 추가(Ver0.5.0)
-  * 보드 기능 추가(Ver0.6.0)
-  * 이미지 인식 기능 추가(Ver0.7.0)
+  * mouse position (mouse 전역 훅을 통한 좌표값 얻기 기능)
+  * r(repeat)기능 추가  
+  * 조건 기능 추가
+  * 보드 기능 추가(현재 테스트 완료 상태)
+  * 이미지 인식 기능 추가
